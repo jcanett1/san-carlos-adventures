@@ -14,3 +14,9 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] Cada uno de los cinco servicios — paseo en kayak, recorrido guiado en bus, paseo en yate, pesca deportiva y senderismo — muestra su propia imagen relacionada con la actividad.
 - [x] Al dar clic o tocar la tarjeta, esta se voltea para mostrar la descripción del servicio. Un segundo clic o toque permite volver a ver la imagen. También se puede activar con Enter o espacio. Cada tarjeta mantiene su estado independiente mediante useState y el giro 3D se activa por aria-pressed.
 - [x] Se conservan los enlaces de Facebook fuera del botón de giro, el estilo visual actual y la adaptación a celular. Las fotos ilustrativas de bus y pesca no se presentan como fotografías verificadas del operador. Las tarjetas usan 5, 3, 2 o 1 columnas según la pantalla y respetan la preferencia de movimiento reducido.
+
+## Actualización: carrusel de portada a pantalla completa
+
+- [x] En la portada, sustituir el único recuadro de imagen por un carrusel de cinco fotos de kayak y senderismo que abarque toda la sección principal, sin quedar limitado al marco pequeño. Dos fotos distintas de kayak y tres de senderismo; el recuadro y su marco redondeado se retiraron del componente de portada.
+- [x] Mostrar cada foto completa, sin recortarla, y alternar las imágenes automáticamente cada 5.5 segundos. Los controles permiten pasar a la foto anterior/siguiente, elegir un slide y pausar o reanudar el carrusel. Las fotografías usan object-fit: contain y se completa el fondo con una versión suavizada de la imagen.
+- [x] Mantener legible el título y los botones sobre las fotos, adaptar el carrusel a pantallas móviles, proporcionar controles accesibles y respetar la preferencia de movimiento reducido. Comprobado con TypeScript, compilación estática y revisión de la portada en 1460 × 900 y 390 × 844; pausa automática para usuarios que prefieren movimiento reducido.

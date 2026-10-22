@@ -24,3 +24,11 @@ La fotografía de bus proviene de https://whatsupsancarlos.com/local-bus-experie
 La fotografía de pesca fue localizada en los resultados públicos de San Carlos Aquatic Adventures / Team Margarita Sport Fishing, otra empresa de San Carlos. Ilustra la actividad, NO acredita la embarcación ni una captura de San Carlos Adventures. La tarjeta y su texto alternativo indican «Imagen ilustrativa». Se conserva la fotografía en assets/service-photos/pesca.jpg y no se atribuye a Enrike's Adventures. URL de la imagen entregada por búsqueda: https://files.manuscdn.com/search-media/310519663044466363/hwo3q4S2AH96NtCNtYRaZq/b99vYbaEvUUZ2hsDuZJ8Th.jpg.
 
 Estas dos imágenes pueden sustituirse por las fotos propias del bus y de la pesca del cliente cuando las proporcione. No se han inventado rutas, precios, equipo incluido, disponibilidad ni capturas garantizadas.
+
+## Carrusel de portada a pantalla completa
+
+El carrusel contiene cinco fotos: dos imágenes de kayak y tres de senderismo. Usa la imagen de kayak junto a la formación rocosa ya subida al proyecto, una foto de kayak identificada con Enrike’s Adventures, además de tres fotos de rutas de montaña asociadas con Enrike’s Adventures.
+
+La fotografía de grupo de montaña `assets/service-photos/senderismo-grupo.jpg` procede de una imagen de viajeros etiquetada como Enrikes Adventures (búsqueda pública en TripAdvisor; 1200 × 900). La foto de kayak identificada con la marca también procede de resultados públicos de Enrikes Adventures. Las dos imágenes restantes de senderismo provienen de la ficha pública del negocio en What's Up San Carlos. Las cinco fuentes están almacenadas bajo `/manus-storage/` y se sirven localmente desde el proyecto para no depender de miniaturas temporales externas.
+
+Las imágenes se muestran con `object-fit: contain` para preservar la foto completa; un fondo suavizado llena el área alrededor, haciendo que el carrusel abarque todo el hero sin el marco pequeño.

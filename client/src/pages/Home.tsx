@@ -14,6 +14,7 @@ import {
   faqs,
   FACEBOOK_URL,
 } from "@/data/experiences";
+import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
 import "./Home.css";
 
@@ -109,7 +110,7 @@ export default function Home() {
 
       <main id="inicio">
         <section className="hero-section" aria-labelledby="hero-title">
-          <div className="hero-glow" aria-hidden="true" />
+          <HeroCarousel />
           <div className="hero-shell">
             <div className="hero-copy">
               <p className="eyebrow eyebrow-light">
@@ -140,29 +141,6 @@ export default function Home() {
                 <i aria-hidden="true" />
                 <span>ELIGE TU RUTA</span>
               </div>
-            </div>
-
-            <div className="hero-art" aria-label="Fotografía de una aventura en kayak en San Carlos">
-              <div className="hero-photo-ring" aria-hidden="true" />
-              <FacebookAnchor className="hero-photo-card">
-                <img
-                  src={COVE_IMAGE}
-                  alt="Paseo en kayak junto a una formación rocosa en el mar de San Carlos."
-                  fetchPriority="high"
-                />
-                <span className="hero-photo-shade" aria-hidden="true" />
-                <span className="photo-index">SC · 01</span>
-                <span className="photo-caption">
-                  <span>Una aventura que empieza en el mar</span>
-                  <ArrowUpRight size={18} aria-hidden="true" />
-                </span>
-              </FacebookAnchor>
-              <div className="hero-stamp" aria-hidden="true">
-                <span>MAR</span>
-                <span className="stamp-star">✳</span>
-                <span>MONTAÑA</span>
-              </div>
-              <span className="hero-side-label">EXPLORA SAN CARLOS</span>
             </div>
           </div>
           <div className="hero-bottomline">
