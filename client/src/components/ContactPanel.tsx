@@ -1,9 +1,10 @@
-import { ArrowUpRight, Instagram, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { contact } from "@/data/contact";
 import "./ContactPanel.css";
 
-function SocialIcon({ name }: { name: "instagram" | "x" | "tiktok" }) {
+function SocialIcon({ name }: { name: "instagram" | "facebook" | "x" | "tiktok" }) {
   if (name === "instagram") return <Instagram size={20} aria-hidden="true" />;
+  if (name === "facebook") return <Facebook size={20} aria-hidden="true" />;
   if (name === "x") {
     return (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -30,7 +31,8 @@ export default function ContactPanel() {
   return (
     <section className="contact-panel" aria-labelledby="contact-panel-title">
       <h3 className="contact-panel-heading" id="contact-panel-title">Información de contacto</h3>
-      <div className="contact-socials">
+      <p className="contact-social-heading">Síguenos y comparte la aventura.</p>
+      <div className="contact-socials" aria-label="Redes sociales">
         {contact.socials.map((social) => (
           <a
             className="contact-social"

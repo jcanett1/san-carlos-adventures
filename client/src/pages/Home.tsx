@@ -260,23 +260,23 @@ export default function Home() {
                 El equipo de San Carlos Adventures puede orientarte sobre los
                 detalles de cada experiencia.
               </p>
-              <FacebookAnchor className="text-link">
-                Escríbeles en Facebook <ArrowRight size={16} aria-hidden="true" />
-              </FacebookAnchor>
-              <ContactPanel />
             </div>
-            <div className="faq-list">
-              {faqs.map((faq, index) => (
-                <details className="faq-item" key={faq.question}>
-                  <summary>
-                    <span className="faq-number">0{index + 1}</span>
-                    <span>{faq.question}</span>
-                    <span className="faq-chevron"><ChevronDown size={18} aria-hidden="true" /></span>
-                  </summary>
-                  <p>{faq.answer}</p>
-                </details>
-              ))}
+            <div className="faq-column">
+              <h3 className="faq-column-heading">Preguntas frecuentes</h3>
+              <div className="faq-list">
+                {faqs.map((faq, index) => (
+                  <details className="faq-item" key={faq.question}>
+                    <summary>
+                      <span className="faq-number">0{index + 1}</span>
+                      <span>{faq.question}</span>
+                      <span className="faq-chevron"><ChevronDown size={18} aria-hidden="true" /></span>
+                    </summary>
+                    <p>{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
             </div>
+            <ContactPanel />
           </div>
         </section>
 

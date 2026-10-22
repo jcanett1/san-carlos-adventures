@@ -31,3 +31,9 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 ## Actualización: WhatsApp en el CTA final
 
 - [x] En «¿Listo para explorar?» quitar el botón de Facebook y reemplazarlo por un botón de WhatsApp al número 622 130 7338. El enlace directo es https://wa.me/526221307338 y el botón muestra el número; conservar los demás enlaces de Facebook del sitio y todos los contenidos actuales. Verificados TypeScript, compilación estática, CTA sin enlace a Facebook y recarga de Home.tsx con HTTP 200.
+
+## Actualización: redes y distribución de dudas/contacto
+
+- [x] En la sección de dudas/contacto mostrar botones visibles con iconos para Instagram, Facebook, TikTok y X, apuntando a los perfiles ya proporcionados, incluido https://www.facebook.com/sancarlos.adventures. Verificados cuatro enlaces con iconos y sus nombres.
+- [x] Reorganizar «¿Tienes dudas?» para evitar la columna larga de contactos debajo del título: encabezado separado y, en escritorio, preguntas frecuentes y panel de contacto alineados en columnas equilibradas. Agrupar redes y contacto directo, conservando usuarios, teléfono, correo y Messenger. En escritorio, preguntas frecuentes y contacto aparecen en columnas alineadas; el panel agrupa cuatro redes y tres canales directos.
+- [x] Adaptar el bloque a celular sin desbordamiento, conservar enlaces accesibles y no cambiar el CTA final de WhatsApp, el carrusel ni las tarjetas de servicios. Revisado en las capturas de escritorio y móvil; TypeScript y compilación estática completados; se conservaron WhatsApp, las cinco fotos del carrusel y las cinco tarjetas de servicios.

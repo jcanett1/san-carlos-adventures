@@ -1,31 +1,89 @@
-.contact-panel {
-  width: 100%;
-  max-width: 400px;
-  min-width: 0;
-  margin-top: 28px;
-  border-top: 2px solid rgba(18, 59, 74, 0.18);
-  padding-top: 1.15rem;
-  color: #123B4A;
+.faq-section .faq-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  column-gap: 40px;
+  row-gap: 36px;
+  align-items: start;
 }
 
-.contact-panel-heading {
+.faq-section .faq-intro {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  column-gap: 40px;
+  align-items: end;
+}
+
+.faq-section .faq-intro > .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: 0.45rem;
+}
+
+.faq-section .faq-intro > h2 {
+  margin: 0;
+}
+
+.faq-section .faq-intro > p:not(.eyebrow) {
+  max-width: 430px;
+  margin: 0;
+  justify-self: end;
+}
+
+.faq-section .faq-column {
+  min-width: 0;
+}
+
+.faq-section .faq-column-heading {
   margin: 0 0 1rem;
   color: #092D37;
   font-family: var(--display-font, "Barlow Condensed", sans-serif);
-  font-size: clamp(1.5rem, 2vw, 1.85rem);
+  font-size: clamp(1.45rem, 2vw, 1.65rem);
   font-weight: 700;
   line-height: 1.1;
 }
 
-.contact-socials {
+.faq-section .faq-item summary {
+  min-height: 85px;
+}
+
+.faq-section .contact-panel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding: 24px;
+  border: 1px solid rgba(18, 59, 74, 0.13);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #123B4A;
+}
+
+.faq-section .contact-panel-heading {
+  margin: 0 0 0.4rem;
+  color: #092D37;
+  font-family: var(--display-font, "Barlow Condensed", sans-serif);
+  font-size: clamp(1.6rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.faq-section .contact-social-heading {
+  margin: 0 0 0.9rem;
+  color: #45636b;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.faq-section .contact-socials {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0.6rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
   margin-bottom: 0.85rem;
 }
 
-.contact-social,
-.contact-method {
+.faq-section .contact-social,
+.faq-section .contact-method {
   box-sizing: border-box;
   min-width: 0;
   color: #123B4A;
@@ -33,42 +91,48 @@
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
 }
 
-.contact-social {
+.faq-section .contact-social {
   display: flex;
-  min-height: 56px;
+  min-height: 72px;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.65rem 0.6rem;
+  gap: 8px;
+  padding: 0.55rem 0.6rem;
   border: 1px solid rgba(18, 59, 74, 0.11);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.6);
 }
 
-.contact-social-icon,
-.contact-method-icon {
+.faq-section .contact-social-icon,
+.faq-section .contact-method-icon {
   display: inline-flex;
-  flex: 0 0 36px;
-  width: 36px;
-  height: 36px;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(242, 140, 40, 0.48);
-  border-radius: 11px;
+  border-radius: 8px;
   background: rgba(242, 140, 40, 0.12);
   color: #092D37;
 }
 
-.contact-social-icon svg,
-.contact-method-icon svg,
-.contact-external-icon {
+.faq-section .contact-social-icon svg {
   display: block;
   width: 20px;
   height: 20px;
   flex: 0 0 20px;
 }
 
-.contact-social-copy,
-.contact-method-copy {
+.faq-section .contact-method-icon svg,
+.faq-section .contact-external-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.faq-section .contact-social-copy,
+.faq-section .contact-method-copy {
   display: flex;
   min-width: 0;
   flex: 1 1 auto;
@@ -76,61 +140,64 @@
   gap: 0.1rem;
 }
 
-.contact-label {
+.faq-section .contact-label {
   color: #45636b;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.2;
 }
 
-.contact-social-copy strong,
-.contact-method-copy strong {
+.faq-section .contact-social-copy strong,
+.faq-section .contact-method-copy strong {
   min-width: 0;
   color: #092D37;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.25;
   overflow-wrap: anywhere;
   word-break: normal;
 }
 
-.contact-direct {
-  display: grid;
-  gap: 0.55rem;
+.faq-section .contact-social .contact-external-icon {
+  display: none;
 }
 
-.contact-method {
+.faq-section .contact-direct {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(18, 59, 74, 0.13);
+}
+
+.faq-section .contact-method {
   display: flex;
   min-height: 56px;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.55rem 0.7rem;
-  border: 1px solid rgba(18, 59, 74, 0.1);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.42);
+  padding: 0.65rem 0.2rem;
+  border-bottom: 1px solid rgba(18, 59, 74, 0.11);
+  background: transparent;
 }
 
-.contact-method-copy {
+.faq-section .contact-method-copy {
   overflow-wrap: anywhere;
 }
 
-.contact-external-icon {
-  flex: 0 0 20px;
+.faq-section .contact-external-icon {
   margin-left: auto;
   color: #45636b;
 }
 
-.contact-social:hover,
-.contact-method:hover {
+.faq-section .contact-social:hover,
+.faq-section .contact-method:hover {
   transform: translateY(-1px);
   border-color: rgba(242, 140, 40, 0.65);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.92);
   color: #092D37;
   text-decoration: none;
 }
 
-.contact-social:focus-visible,
-.contact-method:focus-visible {
+.faq-section .contact-social:focus-visible,
+.faq-section .contact-method:focus-visible {
   outline: 3px solid #F28C28;
   outline-offset: 3px;
   background: #fff;
@@ -138,19 +205,50 @@
   text-decoration: none;
 }
 
-@media (max-width: 420px) {
-  .contact-socials {
+@media (max-width: 800px) {
+  .faq-section .faq-shell {
     grid-template-columns: minmax(0, 1fr);
+    row-gap: 28px;
   }
 
-  .contact-social {
-    min-height: 52px;
+  .faq-section .faq-intro {
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.7rem;
+  }
+
+  .faq-section .faq-intro > .eyebrow {
+    grid-column: 1;
+  }
+
+  .faq-section .faq-intro > p:not(.eyebrow) {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 420px) {
+  .faq-section .contact-panel {
+    padding: 20px 16px;
+  }
+
+  .faq-section .contact-socials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faq-section .contact-social {
+    min-height: 72px;
+    gap: 6px;
+    padding: 0.5rem 0.45rem;
+  }
+
+  .faq-section .contact-social-copy strong {
+    font-size: 0.72rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .contact-social,
-  .contact-method {
+  .faq-section .contact-social,
+  .faq-section .contact-method {
     transition: none;
   }
 }
