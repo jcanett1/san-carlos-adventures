@@ -793,7 +793,6 @@ summary:focus-visible {
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 360ms ease;
 }
 
 .gallery-photo-large img {
@@ -802,10 +801,6 @@ summary:focus-visible {
 
 .gallery-photo-small img {
   object-position: 58% center;
-}
-
-.gallery-photo:hover img {
-  transform: scale(1.04);
 }
 
 .gallery-photo::after {

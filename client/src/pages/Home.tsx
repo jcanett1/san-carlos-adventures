@@ -16,6 +16,7 @@ import {
 } from "@/data/experiences";
 import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
+import ContactPanel from "@/components/ContactPanel";
 import "./Home.css";
 
 const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
@@ -208,11 +209,11 @@ export default function Home() {
               </h2>
               <p>
                 Un vistazo al mar y a los paisajes que hacen especial cada salida.
-                Encuentra más momentos en la galería oficial de Facebook.
+                Conoce más de San Carlos Adventures en nuestra página de Facebook.
               </p>
               <FacebookAnchor className="button button-navy">
                 <Facebook size={17} aria-hidden="true" />
-                Ver fotos en Facebook
+                Visitar Facebook
                 <ArrowUpRight size={16} aria-hidden="true" />
               </FacebookAnchor>
               <div className="gallery-note">
@@ -222,22 +223,22 @@ export default function Home() {
             </div>
 
             <div className="gallery-photos">
-              <FacebookAnchor className="gallery-photo gallery-photo-large">
+              <div className="gallery-photo gallery-photo-large">
                 <img
                   src={COVE_IMAGE}
                   alt="Kayaks recorriendo una ensenada entre formaciones rocosas."
                   loading="lazy"
                 />
-                <span className="gallery-photo-label">MAR DE CORTÉS <ArrowUpRight size={15} aria-hidden="true" /></span>
-              </FacebookAnchor>
-              <FacebookAnchor className="gallery-photo gallery-photo-small">
+                <span className="gallery-photo-label">MAR DE CORTÉS</span>
+              </div>
+              <div className="gallery-photo gallery-photo-small">
                 <img
                   src={HIKING_IMAGE}
                   alt="Senderistas de Enrike’s Adventures contemplando la costa de San Carlos desde la montaña."
                   loading="lazy"
                 />
-                <span className="gallery-photo-label">RUTAS DE MONTAÑA <ArrowUpRight size={15} aria-hidden="true" /></span>
-              </FacebookAnchor>
+                <span className="gallery-photo-label">RUTAS DE MONTAÑA</span>
+              </div>
               <div className="gallery-coordinate" aria-hidden="true">
                 <span>27°57' N</span>
                 <span>SONORA · MX</span>
@@ -261,6 +262,7 @@ export default function Home() {
               <FacebookAnchor className="text-link">
                 Escríbeles en Facebook <ArrowRight size={16} aria-hidden="true" />
               </FacebookAnchor>
+              <ContactPanel />
             </div>
             <div className="faq-list">
               {faqs.map((faq, index) => (

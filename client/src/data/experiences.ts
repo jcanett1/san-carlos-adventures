@@ -107,4 +107,4 @@ export const faqs: { question: string; answer: string }[] = [
   },
 ];
 
-export const FACEBOOK_URL = 'https://www.facebook.com/sancarlos.adventures/photos';
+export const FACEBOOK_URL = 'https://www.facebook.com/sancarlos.adventures';
