@@ -14,6 +14,7 @@ import {
   faqs,
   FACEBOOK_URL,
 } from "@/data/experiences";
+import { contact } from "@/data/contact";
 import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
 import ContactPanel from "@/components/ContactPanel";
@@ -285,11 +286,20 @@ export default function Home() {
             <p className="eyebrow eyebrow-light">Tu próxima historia empieza aquí</p>
             <h2 id="cta-title">¿Listo para explorar?</h2>
             <p>Elige una experiencia y consulta los detalles con San Carlos Adventures.</p>
-            <FacebookAnchor className="button button-orange">
-              <Facebook size={17} aria-hidden="true" />
-              Visitar página de Facebook
+            <a
+              className="button button-orange"
+              href={contact.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Escribir por WhatsApp al ${contact.phone}`}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 11.5a9.5 9.5 0 0 1-14.2 8.3L3 21l1.2-3.8A9.5 9.5 0 1 1 21 11.5Z" />
+                <path d="M8.6 6.9 7.5 8.4c-.8 1.2.1 3.1 2 5s3.8 2.8 5 2l1.5-1.1-2.6-1.7-1.1 1c-1.4-.6-2.4-1.6-3-3l1-1.1-1.7-2.6Z" />
+              </svg>
+              WhatsApp · {contact.phone}
               <ArrowUpRight size={17} aria-hidden="true" />
-            </FacebookAnchor>
+            </a>
           </div>
         </section>
       </main>

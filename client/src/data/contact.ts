@@ -1,6 +1,7 @@
 export const contact = {
   phone: "622 130 7338",
   phoneHref: "tel:+526221307338",
+  whatsappHref: "https://wa.me/526221307338",
   email: "sancarlos_adventures@hotmail.com",
   emailHref: "mailto:sancarlos_adventures@hotmail.com",
   messengerName: "San Carlos Adventures",
