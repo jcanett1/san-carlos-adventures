@@ -1,0 +1,292 @@
+/* Photo-led service cards. The shared grid override intentionally supersedes Home.css. */
+.experiences-section .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  border: 0;
+}
+
+.service-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "DM Sans", var(--body-font), sans-serif;
+}
+
+.service-flip-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 1px solid rgba(18, 59, 74, 0.16);
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.service-flip-button:focus-visible,
+.service-facebook-link:focus-visible {
+  outline: 3px solid #F28C28;
+  outline-offset: 4px;
+}
+
+.service-card-rotor {
+  position: relative;
+  display: grid;
+  grid-template-areas: "face";
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 650ms cubic-bezier(0.2, 0.72, 0.22, 1);
+}
+
+.service-flip-button[aria-pressed="true"] .service-card-rotor {
+  transform: rotateY(180deg);
+}
+
+.service-card-face {
+  grid-area: face;
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 4px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.service-card-front {
+  min-height: 380px;
+  justify-content: flex-end;
+  isolation: isolate;
+  background: #123B4A;
+}
+
+.service-card-photo,
+.service-card-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.service-card-photo {
+  z-index: -2;
+  object-fit: cover;
+  transition: transform 350ms ease, filter 350ms ease;
+}
+
+.service-card-overlay {
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(9, 45, 55, 0.05) 18%, rgba(9, 45, 55, 0.24) 44%, rgba(5, 28, 35, 0.94) 100%);
+}
+
+.service-flip-button:hover .service-card-front {
+  border-color: #F28C28;
+}
+.service-flip-button:hover .service-card-photo {
+  transform: scale(1.035);
+  filter: saturate(1.08);
+}
+
+.service-card-top {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-number {
+  color: #fff;
+  font-family: var(--display-font), "Barlow Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+.service-symbol {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 50%;
+  background: rgba(9,45,55,.36);
+  backdrop-filter: blur(6px);
+}
+.service-card-front-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.service-category {
+  color: #ffc27b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .17em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.service-title {
+  display: block;
+  max-width: 100%;
+  color: #fff;
+  font-family: var(--display-font), "Barlow Condensed", sans-serif;
+  font-size: clamp(25px, 2vw, 32px);
+  font-weight: 700;
+  line-height: .98;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+.service-tagline {
+  color: rgba(255,255,255,.91);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.service-flip-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  color: #ffd29d;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.service-photo-note {
+  position: absolute;
+  top: 76px;
+  left: 18px;
+  padding: 5px 8px;
+  border-radius: 2px;
+  background: rgba(9,45,55,.68);
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+
+.service-card-back {
+  min-height: 380px;
+  transform: rotateY(180deg);
+  background: #FAF8F2;
+  color: #123B4A;
+  border: 1px solid rgba(18,59,74,.14);
+  padding: 76px 19px 18px;
+  gap: 9px;
+}
+.service-card-back .service-card-top { top: 17px; }
+.service-card-back .service-number { color: #123B4A; text-shadow: none; }
+.service-card-back .service-symbol {
+  color: #123B4A;
+  border-color: rgba(18,59,74,.22);
+  background: rgba(18,59,74,.05);
+  backdrop-filter: none;
+}
+.service-card-back .service-category { color: #a65d18; }
+.service-card-back .service-title {
+  color: #092D37;
+  font-size: clamp(23px, 1.8vw, 29px);
+}
+.service-description {
+  display: block;
+  color: #35525a;
+  font-size: 12px;
+  line-height: 1.52;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+.service-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+.service-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  color: #123B4A;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.service-highlight svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: #F28C28;
+}
+.service-card-back .service-flip-hint {
+  margin-top: auto;
+  padding-top: 7px;
+  color: #a65d18;
+}
+
+.service-facebook-link {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 9px;
+  padding: 7px 10px;
+  border-radius: 3px;
+  color: #123B4A;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+.service-facebook-link:hover {
+  color: #092D37;
+  background: rgba(242,140,40,.14);
+}
+
+@media (max-width: 1099px) {
+  .experiences-section .experience-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .service-card-front { min-height: 380px; }
+  .service-card-face { padding-left: 17px; padding-right: 17px; }
+  .service-card-back { padding-top: 76px; }
+  .service-title { font-size: clamp(25px, 3vw, 31px); }
+  .service-card-back .service-title { font-size: clamp(23px, 2.7vw, 28px); }
+}
+
+@media (max-width: 760px) {
+  .experiences-section .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .service-card-front { min-height: 380px; }
+  .service-card-face { padding-left: 16px; padding-right: 16px; }
+  .service-card-back { padding-top: 74px; }
+  .service-description { font-size: 12px; }
+}
+
+@media (max-width: 520px) {
+  .experiences-section .experience-grid { grid-template-columns: minmax(0, 1fr); }
+  .service-card-front { min-height: 390px; }
+  .service-card-face { padding-left: 21px; padding-right: 21px; }
+  .service-card-back { padding-top: 78px; }
+  .service-title { font-size: 32px; }
+  .service-card-back .service-title { font-size: 29px; }
+  .service-description { font-size: 13px; }
+  .service-highlight { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-rotor,
+  .service-card-photo,
+  .service-facebook-link { transition: none; }
+}

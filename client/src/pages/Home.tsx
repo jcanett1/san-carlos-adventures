@@ -3,37 +3,23 @@ import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
-  BusFront,
   ChevronDown,
   Compass,
   Facebook,
-  Fish,
   Menu,
-  Mountain,
-  Ship,
-  Waves,
   X,
-  type LucideIcon,
 } from "lucide-react";
 import {
   experiences,
   faqs,
   FACEBOOK_URL,
-  type Experience,
 } from "@/data/experiences";
+import ExperienceCard from "@/components/ExperienceCard";
 import "./Home.css";
 
 const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
 const COVE_IMAGE = "/manus-storage/kayak-cove_309e9dee.jpg";
 const HIKING_IMAGE = "/manus-storage/hiking_d6a65932.jpg";
-
-const experienceIcons: Record<Experience["icon"], LucideIcon> = {
-  kayak: Waves,
-  bus: BusFront,
-  yacht: Ship,
-  fish: Fish,
-  hike: Mountain,
-};
 
 const navigation = [
   { href: "#experiencias", label: "Experiencias" },
@@ -216,26 +202,9 @@ export default function Home() {
             </div>
 
             <div className="experience-grid">
-              {experiences.map((experience) => {
-                const Icon = experienceIcons[experience.icon];
-                return (
-                  <article className="experience-card" key={experience.id}>
-                    <div className="experience-card-top">
-                      <span className="experience-number">{experience.number}</span>
-                      <span className="experience-icon">
-                        <Icon size={22} strokeWidth={1.7} aria-hidden="true" />
-                      </span>
-                    </div>
-                    <span className="experience-category">{experience.category}</span>
-                    <h3>{experience.title}</h3>
-                    <p className="experience-tagline">{experience.tagline}</p>
-                    <FacebookAnchor className="experience-link">
-                      Conoce más
-                      <ArrowUpRight size={16} aria-hidden="true" />
-                    </FacebookAnchor>
-                  </article>
-                );
-              })}
+              {experiences.map((experience) => (
+                <ExperienceCard experience={experience} key={experience.id} />
+              ))}
             </div>
 
             <div className="experience-footnote">

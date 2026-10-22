@@ -8,3 +8,9 @@
 - [x] Página disponible en Preview, con servidor activo en el puerto configurado 3000 y manifiesto de ruta / con HTTP 200. TypeScript y compilación estática completos. HTML inicial prerenderizado verificado con los cinco servicios y enlace de Facebook.
 
 El avance está preparado para guardarse como checkpoint de Manus. No se solicitó publicación externa, por lo que no se ha publicado.
+
+## Actualización: servicios con foto y giro
+
+- [x] Cada uno de los cinco servicios — paseo en kayak, recorrido guiado en bus, paseo en yate, pesca deportiva y senderismo — muestra su propia imagen relacionada con la actividad.
+- [x] Al dar clic o tocar la tarjeta, esta se voltea para mostrar la descripción del servicio. Un segundo clic o toque permite volver a ver la imagen. También se puede activar con Enter o espacio. Cada tarjeta mantiene su estado independiente mediante useState y el giro 3D se activa por aria-pressed.
+- [x] Se conservan los enlaces de Facebook fuera del botón de giro, el estilo visual actual y la adaptación a celular. Las fotos ilustrativas de bus y pesca no se presentan como fotografías verificadas del operador. Las tarjetas usan 5, 3, 2 o 1 columnas según la pantalla y respetan la preferencia de movimiento reducido.

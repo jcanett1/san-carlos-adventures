@@ -8,6 +8,10 @@ export type Experience = {
   description: string;
   highlights: string[];
   icon: 'kayak' | 'bus' | 'yacht' | 'fish' | 'hike';
+  image: string;
+  imageAlt: string;
+  imagePosition?: string;
+  illustrativeImage?: boolean;
 };
 
 export const experiences: Experience[] = [
@@ -18,9 +22,12 @@ export const experiences: Experience[] = [
     shortTitle: 'Kayak',
     category: 'Mar',
     tagline: 'A remar y disfrutar el mar a tu ritmo.',
-    description: 'Conecta con el entorno desde el agua y disfruta una aventura sencilla, activa y diferente.',
-    highlights: ['Una forma activa de explorar', 'Disfruta el paisaje desde el agua', 'Una experiencia para compartir'],
+    description: 'Descubre San Carlos desde el agua en un paseo en kayak. Rema junto a paisajes costeros y disfruta una experiencia activa para conectar con el mar. Consulta con el equipo la ruta y los detalles de tu salida.',
+    highlights: ['Paisajes desde el agua', 'Aventura a remo', 'Momentos para compartir'],
     icon: 'kayak',
+    image: '/manus-storage/kayak_054be07b.jpg',
+    imageAlt: 'Grupo de kayaks de Enrike’s Adventures frente a un arco rocoso en San Carlos.',
+    imagePosition: '50% 53%',
   },
   {
     id: 'bus',
@@ -28,10 +35,13 @@ export const experiences: Experience[] = [
     title: 'Recorrido guiado en bus',
     shortTitle: 'Recorrido en bus',
     category: 'Tierra',
-    tagline: 'Descubre el entorno en un recorrido acompañado.',
-    description: 'Sube a bordo y disfruta un paseo guiado para conocer más del entorno de una manera cómoda y amena.',
-    highlights: ['Recorrido con guía', 'Conoce el entorno durante el trayecto', 'Ideal para disfrutar en grupo'],
+    tagline: 'Una ruta para descubrir y escuchar historias.',
+    description: 'Sube al bus y conoce el entorno de San Carlos en un recorrido acompañado por un guía. Disfruta los paisajes durante el trayecto y descubre más del destino. Consulta con el equipo las paradas y el itinerario disponibles.',
+    highlights: ['Recorrido acompañado', 'Descubre el destino', 'Disfruta en grupo'],
     icon: 'bus',
+    image: '/manus-storage/bus_01f497ef.jpg',
+    imageAlt: 'Imagen ilustrativa de pasajeros en un autobús de la región de San Carlos y Guaymas.',
+    illustrativeImage: true,
   },
   {
     id: 'yacht',
@@ -39,10 +49,13 @@ export const experiences: Experience[] = [
     title: 'Paseo en yate',
     shortTitle: 'Yate',
     category: 'Mar',
-    tagline: 'Vive el mar con una experiencia especial.',
-    description: 'Disfruta un paseo en yate y regálate un momento para relajarte y apreciar el paisaje marino.',
-    highlights: ['Un paseo para desconectarte', 'Disfruta el paisaje desde el mar', 'Una experiencia para recordar'],
+    tagline: 'Una pausa entre el mar y el horizonte.',
+    description: 'Vive San Carlos desde el mar a bordo de un yate. Relájate, contempla la costa y comparte un paseo con quienes te acompañan. El equipo te orientará sobre la embarcación, el recorrido y las opciones para tu salida.',
+    highlights: ['Vistas de la costa', 'Tiempo para relajarte', 'Una experiencia para compartir'],
     icon: 'yacht',
+    image: '/manus-storage/yate_e007c20c.jpg',
+    imageAlt: 'Visitantes a bordo de un yate de San Carlos Adventures frente a la costa rocosa.',
+    imagePosition: '55% 45%',
   },
   {
     id: 'fishing',
@@ -50,10 +63,14 @@ export const experiences: Experience[] = [
     title: 'Pesca deportiva',
     shortTitle: 'Pesca',
     category: 'Mar',
-    tagline: 'Pon a prueba tu pasión por la pesca.',
-    description: 'Anímate a vivir una jornada de pesca deportiva y disfruta la emoción de la aventura en el mar.',
-    highlights: ['Una actividad para amantes de la pesca', 'Disfruta el tiempo en el mar', 'Emoción y aventura en cada jornada'],
+    tagline: 'La emoción de una aventura en el mar.',
+    description: 'Disfruta una salida de pesca deportiva y vive la emoción de explorar el mar en busca de tu próxima captura. Consulta con el equipo la modalidad de pesca, el equipo necesario y los detalles de la actividad. Las capturas no están garantizadas.',
+    highlights: ['Aventura en el mar', 'Emoción de la pesca', 'Orientación para tu salida'],
     icon: 'fish',
+    image: '/manus-storage/pesca_8b6abcff.jpg',
+    imageAlt: 'Imagen ilustrativa de pesca deportiva en San Carlos, con pescadores y cañas a bordo de una embarcación.',
+    imagePosition: '63% 50%',
+    illustrativeImage: true,
   },
   {
     id: 'hiking',
@@ -61,10 +78,13 @@ export const experiences: Experience[] = [
     title: 'Senderismo',
     shortTitle: 'Senderismo',
     category: 'Tierra',
-    tagline: 'Explora a pie y conecta con la naturaleza.',
-    description: 'Recorre senderos a tu paso y disfruta una aventura al aire libre rodeado de naturaleza.',
-    highlights: ['Aventura al aire libre', 'Explora a tu propio ritmo', 'Una pausa para conectar con la naturaleza'],
+    tagline: 'La naturaleza se descubre paso a paso.',
+    description: 'Explora a pie los paisajes naturales de San Carlos y disfruta de una aventura entre senderos, rocas y vegetación. Antes de salir, consulta la ruta, el nivel de dificultad y las recomendaciones para elegir una experiencia adecuada para ti.',
+    highlights: ['Conexión con la naturaleza', 'Paisajes de mar y montaña', 'Exploración al aire libre'],
     icon: 'hike',
+    image: '/manus-storage/senderismo_71cdc61e.jpg',
+    imageAlt: 'Visitantes de Enrike’s Adventures en una ruta de senderismo entre palmeras y paredes de roca.',
+    imagePosition: '47% 50%',
   },
 ];
 
