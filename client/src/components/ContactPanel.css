@@ -338,3 +338,155 @@
   font-style: italic;
   line-height: 1.5;
 }
+
+
+/* Políticas desplegables, agrupadas bajo los pasos de reservación. */
+.faq-section .reservation-guidance {
+  min-width: 0;
+}
+
+.faq-section .tour-policies {
+  min-width: 0;
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(9, 45, 55, 0.16);
+  color: #092D37;
+}
+
+.faq-section .tour-policies-heading {
+  margin-bottom: 8px;
+}
+
+.faq-section .tour-policies-heading .eyebrow {
+  margin-bottom: 0.45rem;
+}
+
+.faq-section .tour-policies-heading h3 {
+  margin: 0 0 0.7rem;
+  color: #092D37;
+  font-family: var(--display-font, "Barlow Condensed", sans-serif);
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.faq-section .tour-policy-item {
+  min-width: 0;
+  border-bottom: 1px solid rgba(9, 45, 55, 0.16);
+}
+
+.faq-section .tour-policy-item:first-child {
+  border-top: 1px solid rgba(9, 45, 55, 0.16);
+}
+
+.faq-section .tour-policy-item > summary {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 34px;
+  gap: 10px;
+  min-height: 68px;
+  align-items: center;
+  color: #092D37;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-section .tour-policy-item > summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-section .tour-policy-number {
+  color: #BC6A18;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.faq-section .tour-policy-title {
+  min-width: 0;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.faq-section .tour-policy-chevron {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(18, 59, 74, 0.17);
+  border-radius: 50%;
+  color: #123B4A;
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.faq-section .tour-policy-chevron svg {
+  width: 17px;
+  height: 17px;
+}
+
+.faq-section .tour-policy-item[open] .tour-policy-chevron {
+  transform: rotate(180deg);
+  background-color: rgba(242, 140, 40, 0.14);
+}
+
+.faq-section .tour-policy-item > summary:hover .tour-policy-title {
+  color: #9E5511;
+}
+
+.faq-section .tour-policy-item > summary:focus-visible {
+  outline: 3px solid #F28C28;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.faq-section .tour-policy-points {
+  margin: 0;
+  padding: 0 38px 18px 48px;
+  color: #45636b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.faq-section .tour-policy-points li {
+  padding-left: 0.25rem;
+}
+
+.faq-section .tour-policy-points li + li {
+  margin-top: 0.6rem;
+}
+
+.faq-section .tour-policy-points li::marker {
+  color: #BC6A18;
+  font-weight: 700;
+}
+
+@media (max-width: 420px) {
+  .faq-section .tour-policies {
+    margin-top: 25px;
+    padding-top: 18px;
+  }
+
+  .faq-section .tour-policy-item > summary {
+    grid-template-columns: 30px minmax(0, 1fr) 32px;
+    gap: 7px;
+    min-height: 64px;
+  }
+
+  .faq-section .tour-policy-title {
+    font-size: 0.9rem;
+  }
+
+  .faq-section .tour-policy-points {
+    padding: 0 2px 16px 37px;
+    font-size: 0.86rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-section .tour-policy-chevron {
+    transition: none;
+  }
+}

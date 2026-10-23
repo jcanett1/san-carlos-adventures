@@ -18,6 +18,7 @@ import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
 import ContactPanel from "@/components/ContactPanel";
 import BookingSteps from "@/components/BookingSteps";
+import TourPolicies from "@/components/TourPolicies";
 import "./Home.css";
 
 const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
@@ -261,7 +262,10 @@ export default function Home() {
                 con San Carlos Adventures.
               </p>
             </div>
-            <BookingSteps />
+            <div className="reservation-guidance">
+              <BookingSteps />
+              <TourPolicies />
+            </div>
             <ContactPanel />
           </div>
         </section>
