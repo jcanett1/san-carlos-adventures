@@ -1,3 +1,16 @@
+export type ExperiencePhoto = {
+  src: string;
+  alt: string;
+  objectPosition?: string;
+  illustrative?: boolean;
+};
+
+export type ExperiencePriceOption = {
+  name: string;
+  price: string;
+  note?: string;
+};
+
 export type Experience = {
   id: string;
   number: string;
@@ -12,6 +25,8 @@ export type Experience = {
   imageAlt: string;
   imagePosition?: string;
   illustrativeImage?: boolean;
+  photoGallery: ExperiencePhoto[];
+  priceOptions: ExperiencePriceOption[];
 };
 
 export const experiences: Experience[] = [
@@ -28,20 +43,36 @@ export const experiences: Experience[] = [
     image: '/manus-storage/kayak_054be07b.jpg',
     imageAlt: 'Grupo de kayaks de Enrike’s Adventures frente a un arco rocoso en San Carlos.',
     imagePosition: '50% 53%',
+    photoGallery: [
+      { src: '/manus-storage/kayak_054be07b.jpg', alt: 'Grupo de kayaks frente a una formación rocosa de San Carlos.', objectPosition: '50% 53%' },
+      { src: '/manus-storage/kayak-cove_309e9dee.jpg', alt: 'Visitantes reman por una ensenada entre los arcos de roca.' },
+      { src: '/manus-storage/kayak-guia_239a33de.jpg', alt: 'Un guía y sus visitantes disfrutan un paseo en kayak.' },
+      { src: '/manus-storage/kayak-snorkel_56da1bd7.jpg', alt: 'Grupo de visitantes en kayaks frente a la costa de San Carlos.' },
+    ],
+    priceOptions: [
+      { name: 'Paseo en kayak', price: 'Consulta precio' },
+      { name: 'Kayak + snorkel', price: 'Consulta precio', note: 'Pregunta por precio para grupos y disponibilidad.' },
+    ],
   },
   {
     id: 'bus',
     number: '02',
-    title: 'Recorrido guiado en bus',
-    shortTitle: 'Recorrido en bus',
+    title: 'Recorrido guiado',
+    shortTitle: 'Recorrido guiado',
     category: 'Tierra',
     tagline: 'Una ruta para descubrir y escuchar historias.',
-    description: 'Sube al bus y conoce el entorno de San Carlos en un recorrido acompañado por un guía. Disfruta los paisajes durante el trayecto y descubre más del destino. Consulta con el equipo las paradas y el itinerario disponibles.',
+    description: 'Explora el desierto sin necesidad de caminar en un vehículo abierto. Visita las ruinas del Catch 22, Ojo de Agua, La Manga 2 y playa Los Algodones. Duración aproximada: 2.5–3 horas; capacidad máxima de 14 personas.',
     highlights: ['Recorrido acompañado', 'Descubre el destino', 'Disfruta en grupo'],
     icon: 'bus',
-    image: '/manus-storage/bus_01f497ef.jpg',
-    imageAlt: 'Imagen ilustrativa de pasajeros en un autobús de la región de San Carlos y Guaymas.',
-    illustrativeImage: true,
+    image: '/manus-storage/desierto-tour_4eacfbc7.jpg',
+    imageAlt: 'Visitantes a bordo del vehículo abierto del Tour del Desierto.',
+    photoGallery: [
+      { src: '/manus-storage/desierto-tour_4eacfbc7.jpg', alt: 'Visitantes a bordo del vehículo abierto del Tour del Desierto de San Carlos Adventures.' },
+      { src: '/manus-storage/desert-catch_a16dcc11.jpg', alt: 'Visitantes en las ruinas de piedra durante el Tour del Desierto.' },
+    ],
+    priceOptions: [
+      { name: 'Recorrido guiado · Tour del Desierto', price: 'Consulta precio', note: 'Recorrido en vehículo abierto. Consulta la modalidad de tu salida.' },
+    ],
   },
   {
     id: 'yacht',
@@ -56,6 +87,15 @@ export const experiences: Experience[] = [
     image: '/manus-storage/yate_e007c20c.jpg',
     imageAlt: 'Visitantes a bordo de un yate de San Carlos Adventures frente a la costa rocosa.',
     imagePosition: '55% 45%',
+    photoGallery: [
+      { src: '/manus-storage/yate_e007c20c.jpg', alt: 'Visitantes disfrutan un paseo en yate frente a la costa de San Carlos.', objectPosition: '55% 45%' },
+      { src: '/manus-storage/pasted_file_YFrASI_image_4356fb8f.png', alt: 'Embarcación sobre el mar de San Carlos.' },
+      { src: '/manus-storage/pasted_file_suOJwZ_image_3d3c184a.png', alt: 'Yate atracado junto al muelle en San Carlos.' },
+      { src: '/manus-storage/pasted_file_KMWCh8_image_1d93c696.png', alt: 'Yates y visitantes disfrutan una bahía rodeada de formaciones rocosas.' },
+    ],
+    priceOptions: [
+      { name: 'Yate «Si no quieres no»', price: '$2,500 MXN / hora', note: 'Capacidad de 1 a 8 personas.' },
+    ],
   },
   {
     id: 'fishing',
@@ -71,6 +111,13 @@ export const experiences: Experience[] = [
     imageAlt: 'Imagen ilustrativa de pesca deportiva en San Carlos, con pescadores y cañas a bordo de una embarcación.',
     imagePosition: '63% 50%',
     illustrativeImage: true,
+    photoGallery: [
+      { src: '/manus-storage/pesca_8b6abcff.jpg', alt: 'Pescadores participan en una salida de pesca deportiva.', objectPosition: '63% 50%', illustrative: true },
+      { src: '/manus-storage/pasted_file_YFrASI_image_4356fb8f.png', alt: 'Embarcación en el mar como imagen ilustrativa de una salida de pesca.', illustrative: true },
+    ],
+    priceOptions: [
+      { name: 'Pesca deportiva', price: 'Consulta precio' },
+    ],
   },
   {
     id: 'hiking',
@@ -85,6 +132,17 @@ export const experiences: Experience[] = [
     image: '/manus-storage/senderismo_71cdc61e.jpg',
     imageAlt: 'Visitantes de Enrike’s Adventures en una ruta de senderismo entre palmeras y paredes de roca.',
     imagePosition: '47% 50%',
+    photoGallery: [
+      { src: '/manus-storage/senderismo_71cdc61e.jpg', alt: 'Visitantes caminan entre palmeras y paredes de roca en el cañón.' , objectPosition: '47% 50%' },
+      { src: '/manus-storage/hiking_d6a65932.jpg', alt: 'Guía y visitantes contemplan la costa desde una ruta de montaña.' },
+      { src: '/manus-storage/senderismo-grupo_be0ec009.jpg', alt: 'Grupo de Enrike’s Adventures celebra su recorrido en la sierra de San Carlos.' },
+      { src: '/manus-storage/nacapule-tour_867d24fc.jpg', alt: 'Visitantes junto a las formaciones rocosas del cañón de Nacapule.' },
+      { src: '/manus-storage/tetakawi-tour_db5da1dc.jpg', alt: 'Guía contempla la costa desde una ruta del cerro Tetakawi.' },
+    ],
+    priceOptions: [
+      { name: 'Cañón de Nacapule', price: 'Consulta precio', note: '2.5–3 horas · dificultad baja–media.' },
+      { name: 'Cerro Tetakawi', price: 'Consulta precio', note: '4–5 horas · dificultad alta · casco obligatorio.' },
+    ],
   },
 ];
 

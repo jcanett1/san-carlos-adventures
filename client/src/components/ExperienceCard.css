@@ -290,3 +290,133 @@
   .service-card-photo,
   .service-facebook-link { transition: none; }
 }
+
+
+/* Rotación automática de fotos dentro de cada tarjeta de experiencia. */
+.service-card-photo {
+  opacity: 0;
+  transition: opacity 650ms ease, transform 350ms ease, filter 350ms ease;
+}
+
+.service-card-photo.is-active {
+  opacity: 1;
+}
+
+.service-photo-dots {
+  position: absolute;
+  z-index: 1;
+  top: 82px;
+  right: 19px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(9, 45, 55, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.service-photo-dots > span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.service-photo-dots > span.is-active {
+  width: 13px;
+  background: #fff;
+}
+
+/* Opciones y precios en el reverso de las tarjetas. */
+.service-prices {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+  padding: 9px 10px;
+  border-left: 3px solid #F28C28;
+  border-radius: 3px;
+  background: rgba(18, 59, 74, 0.07);
+}
+
+.service-prices-heading {
+  color: #45636b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.service-price-option {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.service-price-option + .service-price-option {
+  padding-top: 6px;
+  border-top: 1px solid rgba(18, 59, 74, 0.12);
+}
+
+.service-price-row {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3px;
+}
+
+.service-price-name {
+  min-width: 0;
+  color: #123B4A;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.service-price-amount {
+  max-width: 100%;
+  flex: 0 0 auto;
+  color: #092D37;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.service-price-note {
+  color: #45636b;
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 520px) {
+  .service-price-name {
+    font-size: 12px;
+  }
+
+  .service-price-amount {
+    font-size: 15px;
+  }
+
+  .service-price-note {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card-photo,
+  .service-photo-dots > span {
+    transition: none;
+  }
+}

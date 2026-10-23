@@ -32,3 +32,12 @@ El carrusel contiene cinco fotos: dos imágenes de kayak y tres de senderismo. U
 La fotografía de grupo de montaña `assets/service-photos/senderismo-grupo.jpg` procede de una imagen de viajeros etiquetada como Enrikes Adventures (búsqueda pública en TripAdvisor; 1200 × 900). La foto de kayak identificada con la marca también procede de resultados públicos de Enrikes Adventures. Las dos imágenes restantes de senderismo provienen de la ficha pública del negocio en What's Up San Carlos. Las cinco fuentes están almacenadas bajo `/manus-storage/` y se sirven localmente desde el proyecto para no depender de miniaturas temporales externas.
 
 Las imágenes se muestran con `object-fit: contain` para preservar la foto completa; un fondo suavizado llena el área alrededor, haciendo que el carrusel abarque todo el hero sin el marco pequeño.
+
+
+## Fotos añadidas a las galerías de servicios y precios
+
+Las galerías de las tarjetas se ampliaron con recursos propios del proyecto, fotos incluidas por el usuario en este encargo y dos recortes fotográficos de paneles promocionales aportados por el usuario (kayak/snorkel y bus). Los archivos originales del usuario se dejaron intactos. Las imágenes quedaron guardadas en el almacenamiento del proyecto y cada tarjeta rota entre sus fotos automáticamente.
+
+Se muestran «Consulta precio» para el kayak solo, kayak + snorkel, las dos rutas de senderismo, el recorrido guiado en bus y la pesca deportiva; se retiraron las tarifas de kayak + snorkel que figuraban en una promoción con vigencia a diciembre de 2025, de acuerdo con la confirmación del cliente. La tarifa confirmada para el yate «Si no quieres no» es $2,500 MXN por hora, con capacidad de 1 a 8 personas.
+
+Se añadieron además fotos recortadas de los paneles propios de Nacapule, Tetakawi y Tour del Desierto, sin abrir nuevamente ni modificar los originales adjuntos. La fotografía `desert-catch.jpg` representa las ruinas del Tour del Desierto y corresponde al recorrido guiado, no a pesca. Las tres fotografías de embarcaciones proporcionadas corresponden a la galería de yate; una imagen de embarcación se usa también como ilustración expresamente etiquetada de salida de pesca, sin afirmar capturas ni que sea una fotografía de una actividad de pesca. La imagen anterior de transporte público se sustituyó en la galería del recorrido guiado por imágenes propias del vehículo abierto y las ruinas.
