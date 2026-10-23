@@ -333,11 +333,21 @@ export default function Home() {
             </span>
           </a>
           <p>Mar, tierra y aventuras en San Carlos, Sonora.</p>
-          <FacebookAnchor className="footer-facebook">
-            <Facebook size={16} aria-hidden="true" />
-            Facebook oficial
-            <ArrowUpRight size={14} aria-hidden="true" />
-          </FacebookAnchor>
+          <nav className="footer-socials" aria-label="Redes sociales oficiales">
+            {contact.socials.map((social) => (
+              <a
+                className="footer-social-link"
+                href={social.href}
+                key={social.platform}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.platform}: ${social.username}, abrir perfil`}
+                title={`Seguir en ${social.platform}`}
+              >
+                <SocialIcon name={social.icon} />
+              </a>
+            ))}
+          </nav>
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} San Carlos Adventures</span>
             <a href="#inicio">Volver al inicio ↑</a>

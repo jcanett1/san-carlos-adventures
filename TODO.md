@@ -71,3 +71,10 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] Agregar en esa sección el mensaje «También contamos con guías en inglés».
 - [x] Agregar en esa sección botones con icono/enlace de Instagram, Facebook, TikTok y X, reutilizando los perfiles y destinos existentes de `contact.socials`.
 - [x] Conservar el resto de la página, incluidas las tarifas/precios en tarjetas y contactos. Comprobadas las 11 fotos, etiquetas, enlaces exactos, guías en inglés, adaptación a escritorio/móvil, TypeScript y compilación estática; las cinco tarjetas, dos grupos de pasos, cuatro políticas, redes del panel de contacto y WhatsApp siguen intactos.
+
+
+## Actualización: iconos de tarjetas y redes en el footer
+
+- [x] Quitar el icono de Facebook repetido junto a «Consultar en Facebook» debajo de las tarjetas de servicios, conservando el enlace de texto a Facebook. Los cinco enlaces conservan solo el texto y la flecha de salida, sin el símbolo de Facebook.
+- [x] Reemplazar el acceso único «Facebook oficial» del footer por enlaces con iconos de Instagram, Facebook, TikTok y X a los perfiles registrados. Cuatro enlaces con etiquetas accesibles, título, foco visible y destinos exactos; grupo adaptable de iconos sin desbordamiento observado.
+- [x] Mantener los demás enlaces y contenidos del sitio; validar TypeScript y compilación estática. Verificados cinco tarjetas, enlaces de redes en galería, CTA de WhatsApp y cuatro iconos de footer en el HTML y Preview; compilación y TypeScript correctos.

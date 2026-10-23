@@ -3,7 +3,6 @@ import {
   ArrowUpRight,
   BusFront,
   Check,
-  Facebook,
   Fish,
   Mountain,
   RotateCcw,
@@ -142,7 +141,6 @@ export default function ExperienceCard({ experience }: { experience: Experience 
         rel="noopener noreferrer"
         aria-label={`Consultar ${experience.title} en Facebook`}
       >
-        <Facebook size={13} aria-hidden="true" />
         Consultar en Facebook
         <ArrowUpRight size={14} aria-hidden="true" />
       </a>

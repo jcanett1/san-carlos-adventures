@@ -1741,3 +1741,62 @@ summary:focus-visible {
     transition: none;
   }
 }
+
+
+/* Accesos compactos y accesibles a las redes sociales del footer. */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.footer-social-link {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(255, 254, 250, 0.26);
+  border-radius: 50%;
+  color: rgba(255, 254, 250, 0.88);
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-2px);
+  border-color: #ffc16e;
+  color: #ffc16e;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.footer-social-link:focus-visible {
+  outline: 3px solid #ffc16e;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .footer-socials {
+    grid-column: 2;
+    grid-row: 1;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 390px) {
+  .footer-socials {
+    gap: 5px;
+  }
+
+  .footer-social-link {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-social-link {
+    transition: none;
+  }
+}
