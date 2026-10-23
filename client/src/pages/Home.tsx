@@ -1,3 +1,4 @@
+import { siteAsset } from "@/lib/siteAsset";
 import {
   ArrowDown,
   ArrowUpRight,
@@ -18,7 +19,7 @@ import BookingSteps from "@/components/BookingSteps";
 import TourPolicies from "@/components/TourPolicies";
 import "./Home.css";
 
-const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
+const BRAND_IMAGE = siteAsset("images/site-assets/brand-logo.jpg");
 const galleryPhotoIndexes: Record<string, number[]> = {
   kayak: [0, 3],
   bus: [0, 1, 2],

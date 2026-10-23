@@ -171,6 +171,8 @@ function vitePluginPublicPlatformConfig(): Plugin {
 const plugins = [vitePluginPublicPlatformConfig(), react(), tailwindcss(), jsxLocPlugin(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === "true" ? "/san-carlos-adventures/" : "/",
+  define: { "process.env.GITHUB_PAGES": JSON.stringify(process.env.GITHUB_PAGES ?? "false") },
   plugins,
   resolve: {
     alias: {

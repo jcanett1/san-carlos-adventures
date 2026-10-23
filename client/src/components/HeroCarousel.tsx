@@ -1,3 +1,4 @@
+import { siteAsset } from "@/lib/siteAsset";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import "./HeroCarousel.css";
@@ -11,31 +12,31 @@ type HeroSlide = {
 
 const slides: HeroSlide[] = [
   {
-    src: "/manus-storage/kayak-cove_309e9dee.jpg",
+    src: siteAsset("images/site-assets/kayak-cove_309e9dee.jpg"),
     alt: "Visitantes recorren en kayak el agua junto a una formación rocosa de San Carlos.",
     category: "Kayak",
     caption: "Explora la costa desde el agua",
   },
   {
-    src: "/manus-storage/kayak-guia_239a33de.jpg",
+    src: siteAsset("images/site-assets/kayak-guia_239a33de.jpg"),
     alt: "Guía de Enrike’s Adventures remando en kayak entre las rocas junto al mar.",
     category: "Kayak",
     caption: "Rema al encuentro del paisaje",
   },
   {
-    src: "/manus-storage/senderismo_71cdc61e.jpg",
+    src: siteAsset("images/site-assets/senderismo_71cdc61e.jpg"),
     alt: "Grupo de senderistas de Enrike’s Adventures junto a las palmeras y rocas de Nacapule.",
     category: "Senderismo",
     caption: "Descubre los caminos de Nacapule",
   },
   {
-    src: "/manus-storage/hiking_d6a65932.jpg",
+    src: siteAsset("images/site-assets/hiking_d6a65932.jpg"),
     alt: "Guía y visitantes disfrutan una caminata con vistas a la costa de San Carlos.",
     category: "Senderismo",
     caption: "Camina entre mar y montaña",
   },
   {
-    src: "/manus-storage/senderismo-grupo_be0ec009.jpg",
+    src: siteAsset("images/site-assets/senderismo-grupo_be0ec009.jpg"),
     alt: "Grupo de Enrike’s Adventures celebra una caminata en la sierra de San Carlos.",
     category: "Senderismo",
     caption: "Cada ruta deja una historia",
