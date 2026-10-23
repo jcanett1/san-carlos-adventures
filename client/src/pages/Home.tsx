@@ -11,13 +11,13 @@ import {
 } from "lucide-react";
 import {
   experiences,
-  faqs,
   FACEBOOK_URL,
 } from "@/data/experiences";
 import { contact } from "@/data/contact";
 import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
 import ContactPanel from "@/components/ContactPanel";
+import BookingSteps from "@/components/BookingSteps";
 import "./Home.css";
 
 const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
@@ -27,7 +27,7 @@ const HIKING_IMAGE = "/manus-storage/hiking_d6a65932.jpg";
 const navigation = [
   { href: "#experiencias", label: "Experiencias" },
   { href: "#galeria", label: "Galería" },
-  { href: "#preguntas", label: "Preguntas" },
+  { href: "#preguntas", label: "Reservaciones" },
 ];
 
 function FacebookAnchor({
@@ -255,27 +255,13 @@ export default function Home() {
                 <span className="eyebrow-line" />
                 Antes de salir
               </p>
-              <h2 id="faq-title">¿Tienes dudas?</h2>
+              <h2 id="faq-title">Pasos para <span>reservar un tour</span></h2>
               <p>
-                El equipo de San Carlos Adventures puede orientarte sobre los
-                detalles de cada experiencia.
+                Planea tu aventura y completa estos pasos para apartar tu tour
+                con San Carlos Adventures.
               </p>
             </div>
-            <div className="faq-column">
-              <h3 className="faq-column-heading">Preguntas frecuentes</h3>
-              <div className="faq-list">
-                {faqs.map((faq, index) => (
-                  <details className="faq-item" key={faq.question}>
-                    <summary>
-                      <span className="faq-number">0{index + 1}</span>
-                      <span>{faq.question}</span>
-                      <span className="faq-chevron"><ChevronDown size={18} aria-hidden="true" /></span>
-                    </summary>
-                    <p>{faq.answer}</p>
-                  </details>
-                ))}
-              </div>
-            </div>
+            <BookingSteps />
             <ContactPanel />
           </div>
         </section>

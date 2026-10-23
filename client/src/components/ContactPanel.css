@@ -252,3 +252,89 @@
     transition: none;
   }
 }
+
+/* Always-visible booking steps replacing the FAQ content. */
+.faq-section .faq-intro h2#faq-title span {
+  display: block;
+  max-width: 100%;
+  font-size: clamp(38px, 4.5vw, 62px);
+  line-height: 1;
+}
+
+.faq-section .booking-steps {
+  min-width: 0;
+  color: #092D37;
+  overflow-wrap: anywhere;
+}
+
+.faq-section .booking-step-group + .booking-step-group {
+  margin-top: 24px;
+}
+
+.faq-section .booking-step-heading {
+  margin: 0 0 4px;
+  color: #092D37;
+  font-family: var(--display-font, "Barlow Condensed", sans-serif);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.faq-section .booking-step-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-section .booking-step {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(9, 45, 55, 0.16);
+}
+
+.faq-section .booking-step-number {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #F28C28;
+  color: #092D37;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.faq-section .booking-step > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.faq-section .booking-step-title {
+  margin: 0 0 3px;
+  color: #092D37;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.faq-section .booking-step-description {
+  margin: 0;
+  color: #45636b;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.faq-section .booking-thanks {
+  margin: 20px 0 0;
+  color: #45636b;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.5;
+}
