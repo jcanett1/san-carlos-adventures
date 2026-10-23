@@ -2,7 +2,7 @@ import { ArrowUpRight, Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { contact } from "@/data/contact";
 import "./ContactPanel.css";
 
-function SocialIcon({ name }: { name: "instagram" | "facebook" | "x" | "tiktok" }) {
+export function SocialIcon({ name }: { name: "instagram" | "facebook" | "x" | "tiktok" }) {
   if (name === "instagram") return <Instagram size={20} aria-hidden="true" />;
   if (name === "facebook") return <Facebook size={20} aria-hidden="true" />;
   if (name === "x") {

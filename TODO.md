@@ -60,6 +60,14 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 
 ## Actualización: galerías y precios por servicio
 
-- [x] Mostrar varias fotos por servicio con rotación automática en cada tarjeta, usando fotos del usuario o imágenes de servicio ya disponibles. Kayak: 4; recorrido guiado: 2; yate: 4; pesca: 2; senderismo: 5. Se comprobó la rotación de las cinco galerías y la carga de imágenes en el Preview público; transición suave cada 4.2 segundos, detenida mientras se muestra el reverso y con movimiento reducido.
+- [x] Mostrar varias fotos por servicio con rotación automática en cada tarjeta, usando fotos del usuario o imágenes de servicio ya disponibles. Kayak: 4; recorrido guiado: 3; yate: 4; pesca: 2; senderismo: 5. Se comprobó la rotación de las cinco galerías y la carga de imágenes en el Preview público; transición suave cada 4.2 segundos, detenida mientras se muestra el reverso y con movimiento reducido.
 - [x] En el reverso de la tarjeta mostrar opciones y precios por servicio: kayak solo y kayak + snorkel como «Consulta precio» porque el anuncio tiene vigencia a diciembre de 2025; yate «Si no quieres no», $2,500 MXN por hora, capacidad de 1 a 8 personas; senderismo de Cañón de Nacapule y Cerro Tetakawi, recorrido guiado y pesca deportiva como «Consulta precio», al no tener una tarifa confirmada vigente. Se usa el nombre Tour del Desierto y sus fotos para el recorrido en vehículo abierto aportado por el usuario.
 - [x] Conservar el giro reversible de tarjetas, el texto descriptivo, las cinco actividades, el acceso de contacto, WhatsApp y comportamiento adaptable. Usar imágenes del material proporcionado o recursos de servicio ya disponibles y no alterar las originales. CSS original restaurado y extendido sin pérdida; comprobados giro, precios sin recorte, cinco columnas de escritorio, TypeScript y compilación. Dos grupos de pasos, cuatro políticas y WhatsApp intactos.
+
+
+## Actualización: galería de servicios, idioma y redes
+
+- [x] Cambiar «Postales de aventura» para mostrar más fotografías de todos los servicios: kayak, recorrido guiado/Tour del Desierto, yate, pesca deportiva y senderismo, manteniendo pies de foto y una distribución adaptable. La galería muestra 11 fotos con etiquetas: kayak y kayak + snorkel (2); Tour del Desierto en vehículo abierto y ruinas (3); yate (3); pesca ilustrativa (1, etiquetada); Nacapule y Tetakawi (2). Los perfiles fotográficos de los servicios mantienen sus distintas imágenes rotativas.
+- [x] Agregar en esa sección el mensaje «También contamos con guías en inglés».
+- [x] Agregar en esa sección botones con icono/enlace de Instagram, Facebook, TikTok y X, reutilizando los perfiles y destinos existentes de `contact.socials`.
+- [x] Conservar el resto de la página, incluidas las tarifas/precios en tarjetas y contactos. Comprobadas las 11 fotos, etiquetas, enlaces exactos, guías en inglés, adaptación a escritorio/móvil, TypeScript y compilación estática; las cinco tarjetas, dos grupos de pasos, cuatro políticas, redes del panel de contacto y WhatsApp siguen intactos.

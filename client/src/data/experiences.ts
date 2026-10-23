@@ -68,6 +68,7 @@ export const experiences: Experience[] = [
     imageAlt: 'Visitantes a bordo del vehículo abierto del Tour del Desierto.',
     photoGallery: [
       { src: '/manus-storage/desierto-tour_4eacfbc7.jpg', alt: 'Visitantes a bordo del vehículo abierto del Tour del Desierto de San Carlos Adventures.' },
+      { src: '/manus-storage/bus-tour_98740e30.jpg', alt: 'Pasajeros disfrutan el recorrido guiado en el vehículo abierto de San Carlos Adventures.' },
       { src: '/manus-storage/desert-catch_a16dcc11.jpg', alt: 'Visitantes en las ruinas de piedra durante el Tour del Desierto.' },
     ],
     priceOptions: [

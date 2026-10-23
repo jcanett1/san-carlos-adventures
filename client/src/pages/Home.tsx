@@ -6,6 +6,7 @@ import {
   ChevronDown,
   Compass,
   Facebook,
+  Languages,
   Menu,
   X,
 } from "lucide-react";
@@ -16,14 +17,29 @@ import {
 import { contact } from "@/data/contact";
 import HeroCarousel from "@/components/HeroCarousel";
 import ExperienceCard from "@/components/ExperienceCard";
-import ContactPanel from "@/components/ContactPanel";
+import ContactPanel, { SocialIcon } from "@/components/ContactPanel";
 import BookingSteps from "@/components/BookingSteps";
 import TourPolicies from "@/components/TourPolicies";
 import "./Home.css";
 
 const BRAND_IMAGE = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663044466363/IGDVYZSYxmtCxITR.jpg";
-const COVE_IMAGE = "/manus-storage/kayak-cove_309e9dee.jpg";
-const HIKING_IMAGE = "/manus-storage/hiking_d6a65932.jpg";
+const galleryPhotoIndexes: Record<string, number[]> = {
+  kayak: [0, 3],
+  bus: [0, 1, 2],
+  yacht: [0, 1, 2],
+  fishing: [0],
+  hiking: [0, 4],
+};
+const galleryPhotos = experiences.flatMap((experience) => {
+  return galleryPhotoIndexes[experience.id].map((photoIndex, index) => {
+    const photo = experience.photoGallery[photoIndex];
+    return {
+      ...photo,
+      key: `${experience.id}-${index}`,
+      label: index === 0 ? experience.title : `${experience.title} · ${index + 1}`,
+    };
+  });
+});
 
 const navigation = [
   { href: "#experiencias", label: "Experiencias" },
@@ -210,37 +226,48 @@ export default function Home() {
                 <span>La emoción se queda.</span>
               </h2>
               <p>
-                Un vistazo al mar y a los paisajes que hacen especial cada salida.
-                Conoce más de San Carlos Adventures en nuestra página de Facebook.
+                Fotos de kayak, recorrido guiado, paseos en yate, pesca deportiva
+                y senderismo para mostrarte más de cada aventura en San Carlos.
               </p>
-              <FacebookAnchor className="button button-navy">
-                <Facebook size={17} aria-hidden="true" />
-                Visitar Facebook
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </FacebookAnchor>
+              <p className="gallery-language-note">
+                <Languages size={19} aria-hidden="true" />
+                También contamos con guías en inglés.
+              </p>
+              <nav className="gallery-socials" aria-label="Redes sociales de San Carlos Adventures">
+                {contact.socials.map((social) => (
+                  <a
+                    className="gallery-social-button"
+                    href={social.href}
+                    key={social.platform}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${social.platform}: ${social.username}, abrir perfil`}
+                  >
+                    <span className="gallery-social-icon"><SocialIcon name={social.icon} /></span>
+                    <span className="gallery-social-copy">
+                      <span>Seguir en {social.platform}</span>
+                      <strong>{social.username}</strong>
+                    </span>
+                    <ArrowUpRight size={14} aria-hidden="true" />
+                  </a>
+                ))}
+              </nav>
               <div className="gallery-note">
                 <span className="gallery-note-mark" aria-hidden="true" />
-                <span>FOTOS · ENRIKE'S ADVENTURES / SAN CARLOS ADVENTURES</span>
+                <span>FOTOS · MAR Y TIERRA · SAN CARLOS, SONORA</span>
               </div>
             </div>
 
-            <div className="gallery-photos">
-              <div className="gallery-photo gallery-photo-large">
-                <img
-                  src={COVE_IMAGE}
-                  alt="Kayaks recorriendo una ensenada entre formaciones rocosas."
-                  loading="lazy"
-                />
-                <span className="gallery-photo-label">MAR DE CORTÉS</span>
-              </div>
-              <div className="gallery-photo gallery-photo-small">
-                <img
-                  src={HIKING_IMAGE}
-                  alt="Senderistas de Enrike’s Adventures contemplando la costa de San Carlos desde la montaña."
-                  loading="lazy"
-                />
-                <span className="gallery-photo-label">RUTAS DE MONTAÑA</span>
-              </div>
+            <div className="gallery-photos" aria-label="Fotos de las experiencias de San Carlos Adventures">
+              {galleryPhotos.map((photo) => (
+                <figure className="gallery-photo" key={photo.key}>
+                  <img src={photo.src} alt={photo.alt} loading="lazy" decoding="async" />
+                  {photo.illustrative && (
+                    <span className="gallery-photo-note">Imagen ilustrativa</span>
+                  )}
+                  <figcaption className="gallery-photo-label">{photo.label}</figcaption>
+                </figure>
+              ))}
               <div className="gallery-coordinate" aria-hidden="true">
                 <span>27°57' N</span>
                 <span>SONORA · MX</span>

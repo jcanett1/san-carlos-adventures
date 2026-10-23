@@ -1494,3 +1494,250 @@ summary:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* Galería ampliada con imágenes de mar, rutas y recorridos. */
+.gallery-shell {
+  grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: clamp(34px, 5.8vw, 78px);
+}
+
+.gallery-copy {
+  min-width: 0;
+}
+
+.gallery-copy > p:not(.eyebrow) {
+  max-width: 410px;
+}
+
+.gallery-copy > p.gallery-language-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: -7px 0 2px;
+  color: var(--sea);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.gallery-language-note svg {
+  flex: 0 0 auto;
+  color: var(--orange);
+}
+
+.gallery-socials {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  max-width: 460px;
+  margin-top: 24px;
+}
+
+.gallery-social-button {
+  display: grid;
+  min-width: 0;
+  min-height: 60px;
+  grid-template-columns: 34px minmax(0, 1fr) 14px;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid rgba(18, 59, 74, 0.16);
+  border-radius: 3px;
+  color: var(--sea);
+  background: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.gallery-social-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(18, 59, 74, 0.4);
+  color: var(--sea-deep);
+  background: #fff;
+}
+
+.gallery-social-button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.gallery-social-icon {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--sea);
+  background: rgba(18, 59, 74, 0.08);
+}
+
+.gallery-social-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.gallery-social-copy strong {
+  color: #68797b;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.gallery-social-button > svg:last-child {
+  color: #a65d18;
+}
+
+.gallery-photos {
+  min-height: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(4, clamp(138px, 13vw, 180px)) auto;
+  grid-auto-rows: clamp(138px, 13vw, 180px);
+  gap: 12px;
+  padding: 0;
+}
+
+.gallery-photos::before {
+  display: none;
+}
+
+.gallery-photo {
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  border-radius: 3px;
+}
+
+.gallery-photo:first-child {
+  grid-row: span 2;
+}
+
+.gallery-photo:nth-child(5n + 1) {
+  border-radius: 42% 42% 3px 3px / 24% 24% 3px 3px;
+}
+
+.gallery-photo:nth-child(5n + 4) {
+  border-radius: 3px 34% 3px 3px;
+}
+
+.gallery-photo img {
+  transition: transform 450ms ease;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.045);
+}
+
+.gallery-photo-label {
+  font-size: clamp(9px, 0.9vw, 12px);
+  letter-spacing: 0.075em;
+  overflow-wrap: anywhere;
+}
+
+.gallery-photo-note {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 9px;
+  padding: 5px 7px;
+  border-radius: 2px;
+  color: #fff;
+  background: rgba(9, 45, 55, 0.76);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.gallery-coordinate {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+}
+
+@media (max-width: 900px) {
+  .gallery-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
+
+  .gallery-copy {
+    max-width: 640px;
+  }
+
+  .gallery-photos {
+    grid-template-rows: repeat(4, clamp(160px, 24vw, 220px)) auto;
+    grid-auto-rows: clamp(160px, 24vw, 220px);
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery-shell {
+    gap: 28px;
+  }
+
+  .gallery-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(6, clamp(135px, 43vw, 185px)) auto;
+    grid-auto-rows: clamp(135px, 43vw, 185px);
+    gap: 10px;
+  }
+
+  .gallery-photo:first-child {
+    grid-row: auto;
+  }
+
+  .gallery-photo:nth-child(11) {
+    grid-column: span 2;
+  }
+
+  .gallery-socials {
+    gap: 8px;
+    margin-top: 19px;
+  }
+
+  .gallery-social-button {
+    min-height: 56px;
+    grid-template-columns: 29px minmax(0, 1fr) 12px;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .gallery-social-icon {
+    width: 29px;
+    height: 29px;
+  }
+
+  .gallery-social-copy {
+    font-size: 10px;
+  }
+
+  .gallery-social-copy strong {
+    font-size: 10px;
+  }
+
+  .gallery-photo-label {
+    right: 9px;
+    bottom: 9px;
+    left: 9px;
+    font-size: 9px;
+  }
+
+  .gallery-photo-note {
+    top: 7px;
+    left: 7px;
+    font-size: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-social-button,
+  .gallery-photo img {
+    transition: none;
+  }
+}
