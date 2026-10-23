@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+
 const bookingGroups = [
   {
     id: "apartar-tour",
@@ -45,15 +47,23 @@ const bookingGroups = [
 export default function BookingSteps() {
   return (
     <div className="booking-steps">
-      {bookingGroups.map((group) => (
-        <section
-          className="booking-step-group"
+      {bookingGroups.map((group, groupIndex) => (
+        <details
+          className="booking-step-group tour-policy-item"
           aria-labelledby={group.id}
           key={group.id}
         >
-          <h3 className="booking-step-heading" id={group.id}>
-            {group.heading}
-          </h3>
+          <summary>
+            <span className="tour-policy-number" aria-hidden="true">
+              {String(groupIndex + 1).padStart(2, "0")}
+            </span>
+            <span className="tour-policy-title" id={group.id}>
+              {group.heading}
+            </span>
+            <span className="tour-policy-chevron" aria-hidden="true">
+              <ChevronDown size={18} />
+            </span>
+          </summary>
           <ol className="booking-step-list" role="list">
             {group.steps.map((step, index) => (
               <li className="booking-step" key={step.title}>
@@ -67,7 +77,7 @@ export default function BookingSteps() {
               </li>
             ))}
           </ol>
-        </section>
+        </details>
       ))}
       <p className="booking-thanks">¡Gracias por tu preferencia!</p>
     </div>
