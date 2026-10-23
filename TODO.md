@@ -84,4 +84,11 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 
 - [x] Quitar los enlaces a Facebook que aparecen debajo de cada tarjeta de servicio y la pregunta «Pregunta en Facebook» bajo la cuadrícula de tarjetas. No queda ningún enlace ni frase de Facebook bajo las cinco tarjetas.
 - [x] Quitar el botón/icono de menú hamburguesa y dejar en móvil enlaces de navegación visibles y operables para Experiencias, Galería y Reservaciones; en escritorio permanece la navegación principal.
-- [x] Conservar Facebook en el footer, la galería y el encabezado donde ya aparece; conservar los demás contenidos. Verificados las cuatro redes del footer/galería, los contactos, políticas, pasos, cinco tarjetas, TypeScript, build y captura de móvil.
+- [x] Conservar Facebook en el footer y la galería; el acceso del encabezado se retira en la actualización siguiente. Conservar los demás contenidos; verificados las cuatro redes del footer/galería, contactos, políticas, pasos, cinco tarjetas, TypeScript, build y captura móvil.
+
+
+## Actualización: quitar Facebook del menú superior
+
+- [x] Quitar el acceso a Facebook del menú superior de escritorio, conservando las secciones de Experiencias, Galería y Reservaciones. La navegación superior solo muestra esas tres secciones.
+- [x] Conservar los accesos a Facebook del hero, la galería y el footer, además de las redes sociales, contactos y WhatsApp existentes.
+- [x] Validar la navegación, TypeScript y compilación estática sin afectar la barra móvil sin hamburguesa; comprobado en HTML, Preview, captura desktop y captura móvil.

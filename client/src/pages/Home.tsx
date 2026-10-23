@@ -84,12 +84,6 @@ export default function Home() {
               </a>
             ))}
           </nav>
-
-          <FacebookAnchor className="header-facebook">
-            <Facebook size={16} aria-hidden="true" />
-            <span>Facebook</span>
-            <ArrowUpRight size={14} aria-hidden="true" />
-          </FacebookAnchor>
         </div>
 
         <nav className="mobile-nav" aria-label="Navegación móvil">
