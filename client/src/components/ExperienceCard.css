@@ -31,8 +31,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.service-flip-button:focus-visible,
-.service-facebook-link:focus-visible {
+.service-flip-button:focus-visible {
   outline: 3px solid #F28C28;
   outline-offset: 4px;
 }
@@ -237,26 +236,6 @@
   color: #a65d18;
 }
 
-.service-facebook-link {
-  display: inline-flex;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  margin-top: 9px;
-  padding: 7px 10px;
-  border-radius: 3px;
-  color: #123B4A;
-  font-size: 11px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 160ms ease, background-color 160ms ease;
-}
-.service-facebook-link:hover {
-  color: #092D37;
-  background: rgba(242,140,40,.14);
-}
-
 @media (max-width: 1099px) {
   .experiences-section .experience-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .service-card-front { min-height: 380px; }
@@ -287,8 +266,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .service-card-rotor,
-  .service-card-photo,
-  .service-facebook-link { transition: none; }
+  .service-card-photo { transition: none; }
 }
 
 

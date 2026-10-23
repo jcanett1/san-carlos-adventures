@@ -1,14 +1,10 @@
-import { useState } from "react";
 import {
   ArrowDown,
-  ArrowRight,
   ArrowUpRight,
   ChevronDown,
   Compass,
   Facebook,
   Languages,
-  Menu,
-  X,
 } from "lucide-react";
 import {
   experiences,
@@ -67,14 +63,11 @@ function FacebookAnchor({
 }
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const closeMenu = () => setMenuOpen(false);
-
   return (
     <div className="adventure-site">
       <header className="site-header">
         <div className="nav-shell">
-          <a className="brand-lockup" href="#inicio" onClick={closeMenu} aria-label="San Carlos Adventures, inicio">
+          <a className="brand-lockup" href="#inicio" aria-label="San Carlos Adventures, inicio">
             <span className="brand-emblem">
               <img src={BRAND_IMAGE} alt="" aria-hidden="true" />
             </span>
@@ -97,34 +90,15 @@ export default function Home() {
             <span>Facebook</span>
             <ArrowUpRight size={14} aria-hidden="true" />
           </FacebookAnchor>
-
-          <button
-            className="menu-toggle"
-            type="button"
-            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            {menuOpen ? <X size={23} /> : <Menu size={23} />}
-          </button>
         </div>
 
-        {menuOpen && (
-          <nav className="mobile-nav" id="mobile-navigation" aria-label="Navegación móvil">
-            {navigation.map((item) => (
-              <a href={item.href} key={item.href} onClick={closeMenu}>
-                {item.label}
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </a>
-            ))}
-            <FacebookAnchor className="mobile-facebook" >
-              <Facebook size={16} aria-hidden="true" />
-              Visitar Facebook
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </FacebookAnchor>
-          </nav>
-        )}
+        <nav className="mobile-nav" aria-label="Navegación móvil">
+          {navigation.map((item) => (
+            <a href={item.href} key={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </header>
 
       <main id="inicio">
@@ -207,9 +181,6 @@ export default function Home() {
             <div className="experience-footnote">
               <span className="footnote-symbol" aria-hidden="true">✳</span>
               <p>Consulta directamente con el equipo los detalles y la disponibilidad de cada experiencia.</p>
-              <FacebookAnchor className="text-link">
-                Pregunta en Facebook <ArrowRight size={16} aria-hidden="true" />
-              </FacebookAnchor>
             </div>
           </div>
         </section>

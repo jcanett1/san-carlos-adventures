@@ -78,3 +78,10 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] Quitar el icono de Facebook repetido junto a «Consultar en Facebook» debajo de las tarjetas de servicios, conservando el enlace de texto a Facebook. Los cinco enlaces conservan solo el texto y la flecha de salida, sin el símbolo de Facebook.
 - [x] Reemplazar el acceso único «Facebook oficial» del footer por enlaces con iconos de Instagram, Facebook, TikTok y X a los perfiles registrados. Cuatro enlaces con etiquetas accesibles, título, foco visible y destinos exactos; grupo adaptable de iconos sin desbordamiento observado.
 - [x] Mantener los demás enlaces y contenidos del sitio; validar TypeScript y compilación estática. Verificados cinco tarjetas, enlaces de redes en galería, CTA de WhatsApp y cuatro iconos de footer en el HTML y Preview; compilación y TypeScript correctos.
+
+
+## Actualización: limpiar enlaces bajo servicios y menú móvil
+
+- [x] Quitar los enlaces a Facebook que aparecen debajo de cada tarjeta de servicio y la pregunta «Pregunta en Facebook» bajo la cuadrícula de tarjetas. No queda ningún enlace ni frase de Facebook bajo las cinco tarjetas.
+- [x] Quitar el botón/icono de menú hamburguesa y dejar en móvil enlaces de navegación visibles y operables para Experiencias, Galería y Reservaciones; en escritorio permanece la navegación principal.
+- [x] Conservar Facebook en el footer, la galería y el encabezado donde ya aparece; conservar los demás contenidos. Verificados las cuatro redes del footer/galería, los contactos, políticas, pasos, cinco tarjetas, TypeScript, build y captura de móvil.

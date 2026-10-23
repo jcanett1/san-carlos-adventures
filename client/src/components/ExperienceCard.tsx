@@ -11,7 +11,7 @@ import {
   Waves,
   type LucideIcon,
 } from "lucide-react";
-import { FACEBOOK_URL, type Experience } from "@/data/experiences";
+import type { Experience } from "@/data/experiences";
 import "./ExperienceCard.css";
 
 const icons: Record<Experience["icon"], LucideIcon> = {
@@ -134,16 +134,6 @@ export default function ExperienceCard({ experience }: { experience: Experience 
           </span>
         </span>
       </button>
-      <a
-        className="service-facebook-link"
-        href={FACEBOOK_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Consultar ${experience.title} en Facebook`}
-      >
-        Consultar en Facebook
-        <ArrowUpRight size={14} aria-hidden="true" />
-      </a>
     </article>
   );
 }
