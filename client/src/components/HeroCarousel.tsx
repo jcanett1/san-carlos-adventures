@@ -1,6 +1,5 @@
 import { siteAsset } from "@/lib/siteAsset";
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import "./HeroCarousel.css";
 
 type HeroSlide = {
@@ -45,27 +44,27 @@ const slides: HeroSlide[] = [
 
 export default function HeroCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const activeSlide = slides[activeIndex];
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (reduceMotion.matches) setIsPaused(true);
+    setPrefersReducedMotion(reduceMotion.matches);
 
     const handlePreference = (event: MediaQueryListEvent) => {
-      if (event.matches) setIsPaused(true);
+      setPrefersReducedMotion(event.matches);
     };
     reduceMotion.addEventListener?.("change", handlePreference);
     return () => reduceMotion.removeEventListener?.("change", handlePreference);
   }, []);
 
   useEffect(() => {
-    if (isPaused) return;
-    const timer = window.setInterval(() => {
+    if (prefersReducedMotion) return;
+    const timer = window.setTimeout(() => {
       setActiveIndex((current) => (current + 1) % slides.length);
     }, 5500);
-    return () => window.clearInterval(timer);
-  }, [isPaused]);
+    return () => window.clearTimeout(timer);
+  }, [activeIndex, prefersReducedMotion]);
 
   const showSlide = (index: number) => {
     setActiveIndex((index + slides.length) % slides.length);
@@ -99,51 +98,22 @@ export default function HeroCarousel() {
       </div>
       <div className="hero-carousel-wash" aria-hidden="true" />
 
-      <div className="hero-carousel-caption" aria-live={isPaused ? "polite" : "off"} aria-atomic="true">
+      <div className="hero-carousel-caption" aria-live={prefersReducedMotion ? "polite" : "off"} aria-atomic="true">
         <span>{activeSlide.category} · {String(activeIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}</span>
         <strong>{activeSlide.caption}</strong>
       </div>
 
-      <div className="hero-carousel-controls" role="group" aria-label="Controles del carrusel">
-        <button
-          className="hero-carousel-arrow"
-          type="button"
-          aria-label="Ver foto anterior"
-          onClick={() => showSlide(activeIndex - 1)}
-        >
-          <ChevronLeft size={19} aria-hidden="true" />
-        </button>
-
-        <div className="hero-carousel-dots" role="group" aria-label="Elegir una foto">
-          {slides.map((slide, index) => (
-            <button
-              className={`hero-carousel-dot${index === activeIndex ? " is-active" : ""}`}
-              key={slide.src}
-              type="button"
-              aria-label={`Mostrar foto ${index + 1} de ${slides.length}: ${slide.category}`}
-              aria-pressed={index === activeIndex}
-              onClick={() => showSlide(index)}
-            />
-          ))}
-        </div>
-
-        <button
-          className="hero-carousel-arrow"
-          type="button"
-          aria-label="Ver foto siguiente"
-          onClick={() => showSlide(activeIndex + 1)}
-        >
-          <ChevronRight size={19} aria-hidden="true" />
-        </button>
-        <button
-          className="hero-carousel-arrow hero-carousel-toggle"
-          type="button"
-          aria-label={isPaused ? "Reanudar carrusel" : "Pausar carrusel"}
-          aria-pressed={isPaused}
-          onClick={() => setIsPaused((paused) => !paused)}
-        >
-          {isPaused ? <Play size={15} aria-hidden="true" /> : <Pause size={15} aria-hidden="true" />}
-        </button>
+      <div className="hero-carousel-dots" role="group" aria-label="Elegir una foto">
+        {slides.map((slide, index) => (
+          <button
+            className={`hero-carousel-dot${index === activeIndex ? " is-active" : ""}`}
+            key={slide.src}
+            type="button"
+            aria-label={`Mostrar foto ${index + 1} de ${slides.length}: ${slide.category}`}
+            aria-pressed={index === activeIndex}
+            onClick={() => showSlide(index)}
+          />
+        ))}
       </div>
     </div>
   );
