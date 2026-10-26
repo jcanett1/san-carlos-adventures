@@ -143,8 +143,7 @@ export default function Home() {
 
         <div className="route-ribbon" aria-label="Mar, ruta, naturaleza y aventura">
           <div className="route-ribbon-track">
-            <span>MAR</span><i>✳</i><span>RUTA</span><i>✳</i><span>NATURALEZA</span><i>✳</i><span>AVENTURA</span><i>✳</i>
-            <span>MAR</span><i>✳</i><span>RUTA</span><i>✳</i><span>NATURALEZA</span><i>✳</i><span>AVENTURA</span><i>✳</i>
+            <span>MAR</span><i>✳</i><span>RUTA</span><i>✳</i><span>NATURALEZA</span><i>✳</i><span>AVENTURA</span>
           </div>
         </div>
 

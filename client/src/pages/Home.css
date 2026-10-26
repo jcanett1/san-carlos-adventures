@@ -492,12 +492,14 @@ summary:focus-visible {
 }
 
 .route-ribbon-track {
-  width: max-content;
+  width: 100%;
   min-height: 50px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: clamp(14px, 2vw, 30px);
   padding: 0 24px;
+  box-sizing: border-box;
   font-family: var(--display-font);
   font-size: 15px;
   font-weight: 700;
@@ -1217,8 +1219,10 @@ summary:focus-visible {
 
   .route-ribbon-track {
     min-height: 43px;
-    gap: 21px;
-    font-size: 13px;
+    gap: 8px;
+    padding: 0 10px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
   }
 
   .section-shell {
