@@ -5,40 +5,40 @@ import "./HeroCarousel.css";
 type HeroSlide = {
   src: string;
   alt: string;
-  category: "Kayak" | "Senderismo";
+  category: "Kayak" | "Senderismo" | "Tour guiado" | "Aventura";
   caption: string;
 };
 
 const slides: HeroSlide[] = [
   {
-    src: siteAsset("images/site-assets/kayak-cove_309e9dee.jpg"),
-    alt: "Visitantes recorren en kayak el agua junto a una formación rocosa de San Carlos.",
+    src: siteAsset("images/site-assets/hero-kayak-arch.png"),
+    alt: "Dos visitantes en un kayak amarillo frente a la costa rocosa de San Carlos.",
     category: "Kayak",
-    caption: "Explora la costa desde el agua",
+    caption: "Rema entre mar y montaña",
   },
   {
-    src: siteAsset("images/site-assets/kayak-guia_239a33de.jpg"),
-    alt: "Guía de Enrike’s Adventures remando en kayak entre las rocas junto al mar.",
-    category: "Kayak",
-    caption: "Rema al encuentro del paisaje",
-  },
-  {
-    src: siteAsset("images/site-assets/senderismo_71cdc61e.jpg"),
-    alt: "Grupo de senderistas de Enrike’s Adventures junto a las palmeras y rocas de Nacapule.",
+    src: siteAsset("images/site-assets/hero-senderismo.png"),
+    alt: "Dos visitantes recorren un sendero rocoso con vistas a la costa de San Carlos.",
     category: "Senderismo",
-    caption: "Descubre los caminos de Nacapule",
+    caption: "Sube por los senderos de la sierra",
   },
   {
-    src: siteAsset("images/site-assets/hiking_d6a65932.jpg"),
-    alt: "Guía y visitantes disfrutan una caminata con vistas a la costa de San Carlos.",
-    category: "Senderismo",
-    caption: "Camina entre mar y montaña",
+    src: siteAsset("images/site-assets/hero-tour-desierto.png"),
+    alt: "Persona en una cuatrimoto junto a la costa de San Carlos.",
+    category: "Tour guiado",
+    caption: "Explora el desierto junto al mar",
   },
   {
-    src: siteAsset("images/site-assets/senderismo-grupo_be0ec009.jpg"),
-    alt: "Grupo de Enrike’s Adventures celebra una caminata en la sierra de San Carlos.",
+    src: siteAsset("images/site-assets/hero-canon-nacapule.png"),
+    alt: "Dos personas descansan entre palmeras y paredes de roca en un cañón.",
     category: "Senderismo",
-    caption: "Cada ruta deja una historia",
+    caption: "Descubre el cañón de Nacapule",
+  },
+  {
+    src: siteAsset("images/site-assets/hero-sandboard.png"),
+    alt: "Visitante prepara una tabla de sandboarding en las dunas de arena.",
+    category: "Aventura",
+    caption: "Deslízate entre arena y mar",
   },
 ];
 
@@ -75,7 +75,7 @@ export default function HeroCarousel() {
       className="hero-carousel"
       role="region"
       aria-roledescription="carrusel"
-      aria-label="Cinco fotos de kayak y senderismo"
+      aria-label="Cinco fotos de kayak, senderismo y aventura en el desierto"
     >
       <div
         className="hero-carousel-backdrop"
