@@ -7,6 +7,7 @@ type HeroSlide = {
   alt: string;
   category: "Kayak" | "Senderismo" | "Tour guiado" | "Aventura";
   caption: string;
+  orientation: "landscape" | "portrait" | "portrait-tall";
 };
 
 const slides: HeroSlide[] = [
@@ -15,30 +16,35 @@ const slides: HeroSlide[] = [
     alt: "Dos visitantes en un kayak amarillo frente a la costa rocosa de San Carlos.",
     category: "Kayak",
     caption: "Rema entre mar y montaña",
+    orientation: "landscape",
   },
   {
     src: siteAsset("images/site-assets/hero-senderismo.png"),
     alt: "Dos visitantes recorren un sendero rocoso con vistas a la costa de San Carlos.",
     category: "Senderismo",
     caption: "Sube por los senderos de la sierra",
+    orientation: "portrait",
   },
   {
     src: siteAsset("images/site-assets/hero-tour-desierto.png"),
     alt: "Persona en una cuatrimoto junto a la costa de San Carlos.",
     category: "Tour guiado",
     caption: "Explora el desierto junto al mar",
+    orientation: "portrait",
   },
   {
     src: siteAsset("images/site-assets/hero-canon-nacapule.png"),
     alt: "Dos personas descansan entre palmeras y paredes de roca en un cañón.",
     category: "Senderismo",
     caption: "Descubre el cañón de Nacapule",
+    orientation: "portrait",
   },
   {
     src: siteAsset("images/site-assets/hero-sandboard.png"),
     alt: "Visitante prepara una tabla de sandboarding en las dunas de arena.",
     category: "Aventura",
     caption: "Deslízate entre arena y mar",
+    orientation: "portrait-tall",
   },
 ];
 
@@ -77,15 +83,10 @@ export default function HeroCarousel() {
       aria-roledescription="carrusel"
       aria-label="Cinco fotos de kayak, senderismo y aventura en el desierto"
     >
-      <div
-        className="hero-carousel-backdrop"
-        style={{ backgroundImage: `url("${activeSlide.src}")` }}
-        aria-hidden="true"
-      />
       <div className="hero-carousel-slides" aria-live="off">
         {slides.map((slide, index) => (
           <img
-            className={`hero-carousel-image${index === activeIndex ? " is-active" : ""}`}
+            className={`hero-carousel-image is-${slide.orientation}${index === activeIndex ? " is-active" : ""}`}
             key={slide.src}
             src={slide.src}
             alt={slide.alt}
