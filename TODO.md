@@ -166,3 +166,11 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] En esa sección informar que todos los tours incluyen equipo completo, hidratación, seguro de gastos médicos, fotografías y guías acreditados. Los cinco elementos aparecen en la frase prerenderizada.
 - [x] En «Información de contacto», agregar el teléfono 622-142-5010 como opción adicional y seleccionable, conservando el teléfono 622-130-7338 y los demás medios de contacto. HTML confirma los dos enlaces tel: y que el CTA/WhatsApp siguen usando el número principal.
 - [x] Validar el contenido y sincronizar ambos repositorios; publicar y confirmar GitHub Pages. TypeScript/build correctos en las dos copias; main gestionado aceptó 7afbb5e y Pages 08a7197. Workflow 40722546468 terminó correctamente. HTTPS público HTTP 200 confirma recorridos en inglés con guías bilingües, equipo completo, hidratación, seguro de gastos médicos, fotografías, guías acreditados, enlaces tel: para 622-130-7338 y 622-142-5010, y WhatsApp principal intacto.
+
+
+## Actualización: próximos servicios de Punto Náutico (28 de octubre de 2026)
+
+- [x] Agregar una sección propia «Nuestros próximos servicios» para Punto Náutico, con la imagen proporcionada por el usuario y una descripción de lo que ofrecerá próximamente. Se ubica entre galería y reservaciones, marcada como «Próximamente», sin fecha ni precios inventados.
+- [x] Resumir las categorías que aparecen en la imagen: embarcaciones/mantenimiento y accesorios; artículos de pesca; audio marino; aventura/snorkel; instalación, equipo eléctrico/electrónico y mantenimiento básico. HTML prerenderizado y revisión independiente confirman las cinco áreas.
+- [x] Conservar el volante original sin editar, añadir texto alternativo descriptivo y adaptar la sección a escritorio y móvil. Original en Storage y Pages con SHA-256 idéntico; imagen de alto automático sin recorte, enlace al volante completo, dos columnas en escritorio y una hasta 800 px.
+- [ ] Validar build y contenido, sincronizar main y la copia GitHub Pages, publicar y comprobar la página y el recurso. TypeScript/build y comprobaciones HTML de ambas copias correctos; pendiente publicación y guardado final.

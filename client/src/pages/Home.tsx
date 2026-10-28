@@ -17,6 +17,7 @@ import ExperienceCard from "@/components/ExperienceCard";
 import ContactPanel, { SocialIcon } from "@/components/ContactPanel";
 import BookingSteps from "@/components/BookingSteps";
 import TourPolicies from "@/components/TourPolicies";
+import UpcomingServices from "@/components/UpcomingServices";
 import "./Home.css";
 
 const BRAND_IMAGE = siteAsset("images/site-assets/brand-logo.jpg");
@@ -247,6 +248,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <UpcomingServices imageSrc={siteAsset("images/site-assets/punto-nautico-services.png")} />
 
         <section className="faq-section" id="preguntas" aria-labelledby="faq-title">
           <div className="section-shell faq-shell">

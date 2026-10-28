@@ -74,3 +74,9 @@ El usuario proporcionó las imágenes para las tres nuevas tarjetas de «Cinco r
 - **Snorkel:** `pasted_file_LURZIO_image.png` (`/manus-storage/pasted_file_LURZIO_image_1c545ddd.png`; Pages: `images/site-assets/route-snorkel-coral.png`) y `pasted_file_fsEVZ0_image.png` (`/manus-storage/pasted_file_fsEVZ0_image_d64921b0.png`; Pages: `images/site-assets/route-snorkelers.png`).
 
 Las tarjetas muestran «Consulta precio» porque no se proporcionó una tarifa, y las descripciones se limitan a los detalles confirmados o visibles en las fotos.
+
+## Próximos servicios: Punto Náutico (28 de octubre de 2026)
+
+El usuario aportó el volante `pasted_file_ZymJcc_image.png` para la sección «Nuestros próximos servicios». Se utiliza el original sin recortar, editar ni convertir, desde `/manus-storage/pasted_file_ZymJcc_image_bb726715.png` en el sitio gestionado y `images/site-assets/punto-nautico-services.png` en GitHub Pages. Ambos originales locales tienen SHA-256 `9bd041fdc3c710591f9f4d2f380c1e22c8c0d3715013b7a205cf67d2da0d5f0c`.
+
+El texto resume únicamente las cinco categorías del volante: embarcaciones y mantenimiento, pesca, audio marino, aventura y snorkel, e instalación y servicios. Se presenta como oferta próxima, sin inventar fecha de apertura, precios o disponibilidad actual. La imagen se muestra completa, con alto automático, y puede abrirse a tamaño original; no se volvió a visualizar el archivo adjunto con herramientas.
