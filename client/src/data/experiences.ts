@@ -127,8 +127,8 @@ export const experiences: Experience[] = [
     title: 'Senderismo',
     shortTitle: 'Senderismo',
     category: 'Tierra',
-    tagline: 'La naturaleza se descubre paso a paso.',
-    description: 'Explora a pie los paisajes naturales de San Carlos y disfruta de una aventura entre senderos, rocas y vegetación. Antes de salir, consulta la ruta, el nivel de dificultad y las recomendaciones para elegir una experiencia adecuada para ti.',
+    tagline: 'Nacapule, La Poza Manantial y Cerro Tetakawi.',
+    description: 'Elige tu tour de senderismo a Nacapule, La Poza Manantial o Cerro Tetakawi y explora a pie los paisajes naturales de San Carlos. Consulta con el equipo el nivel de dificultad y las recomendaciones para elegir la ruta adecuada para ti.',
     highlights: ['Conexión con la naturaleza', 'Paisajes de mar y montaña', 'Exploración al aire libre'],
     icon: 'hike',
     image: siteAsset("images/site-assets/senderismo_71cdc61e.jpg"),
@@ -143,6 +143,7 @@ export const experiences: Experience[] = [
     ],
     priceOptions: [
       { name: 'Cañón de Nacapule', price: 'Consulta precio', note: '2.5–3 horas · dificultad baja–media.' },
+      { name: 'La Poza Manantial', price: 'Consulta precio' },
       { name: 'Cerro Tetakawi', price: 'Consulta precio', note: '4–5 horas · dificultad alta · casco obligatorio.' },
     ],
   },
