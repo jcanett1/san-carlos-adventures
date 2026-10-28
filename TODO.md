@@ -158,3 +158,11 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] En «Fotografías de los tours», indicar que tardan de 5 a 7 días en compartirse. La política compilada contiene esta frase y ya no señala la página de Facebook.
 - [x] Agregar el yate «Mi Gusto» a la tarjeta de yate con costo de $3,500 MXN por hora y capacidad de 10 a 25 personas como máximo, preservando la opción «Si no quieres no» a $2,500 MXN/hora para 1 a 8 personas. HTML compilado confirma las dos opciones y ambas capacidades.
 - [x] Validar, guardar en main y publicar la copia GitHub Pages. TypeScript y builds de ambas copias correctos; main gestionado aceptó 4f4d131 y Pages a75afad. Workflow 40721082894 terminó correctamente. Verificación pública HTTP 200 confirma el recorrido sin Catch 22, anticipación 24–48 h en pasos y política, fotografías en 5–7 días, ambas opciones de yate con precios/capacidades, ocho tarjetas y bundle nuevo cargado.
+
+
+## Actualización: recorridos en inglés, lo que incluyen los tours y contacto (28 de octubre de 2026)
+
+- [x] En «El paisaje cambia. La emoción se queda.», indicar que hay recorridos en inglés con guías bilingües. El texto del HTML compilado lo confirma.
+- [x] En esa sección informar que todos los tours incluyen equipo completo, hidratación, seguro de gastos médicos, fotografías y guías acreditados. Los cinco elementos aparecen en la frase prerenderizada.
+- [x] En «Información de contacto», agregar el teléfono 622-142-5010 como opción adicional y seleccionable, conservando el teléfono 622-130-7338 y los demás medios de contacto. HTML confirma los dos enlaces tel: y que el CTA/WhatsApp siguen usando el número principal.
+- [ ] Validar el contenido y sincronizar ambos repositorios; publicar y confirmar GitHub Pages. TypeScript y build estático pasan en ambas copias; falta terminar push y deployment.

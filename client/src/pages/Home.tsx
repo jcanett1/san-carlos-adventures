@@ -199,7 +199,11 @@ export default function Home() {
               </p>
               <p className="gallery-language-note">
                 <Languages size={19} aria-hidden="true" />
-                También contamos con guías en inglés.
+                <span>
+                  Contamos con recorridos en inglés con guías bilingües.
+                  <br />
+                  Todos los tours incluyen equipo completo, hidratación, seguro de gastos médicos, fotografías y guías acreditados.
+                </span>
               </p>
               <nav className="gallery-socials" aria-label="Redes sociales de San Carlos Adventures">
                 {contact.socials.map((social) => (

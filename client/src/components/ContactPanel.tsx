@@ -59,6 +59,13 @@ export default function ContactPanel() {
             <strong>{contact.phone}</strong>
           </span>
         </a>
+        <a className="contact-method" href={contact.additionalPhoneHref} aria-label={`Llamar al ${contact.additionalPhone}`}>
+          <span className="contact-method-icon"><Phone size={20} aria-hidden="true" /></span>
+          <span className="contact-method-copy">
+            <span className="contact-label">Teléfono adicional</span>
+            <strong>{contact.additionalPhone}</strong>
+          </span>
+        </a>
         <a className="contact-method" href={contact.emailHref} aria-label={`Enviar correo a ${contact.email}`}>
           <span className="contact-method-icon"><Mail size={20} aria-hidden="true" /></span>
           <span className="contact-method-copy">
