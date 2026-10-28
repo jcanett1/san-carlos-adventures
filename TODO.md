@@ -92,3 +92,48 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 - [x] Quitar el acceso a Facebook del menú superior de escritorio, conservando las secciones de Experiencias, Galería y Reservaciones. La navegación superior solo muestra esas tres secciones.
 - [x] Conservar los accesos a Facebook del hero, la galería y el footer, además de las redes sociales, contactos y WhatsApp existentes.
 - [x] Validar la navegación, TypeScript y compilación estática sin afectar la barra móvil sin hamburguesa; comprobado en HTML, Preview, captura desktop y captura móvil.
+
+
+## Actualización: navegación transparente sobre la portada
+
+- [x] Hacer transparente la barra del menú y superponerla a la imagen de portada para que la fotografía se vea detrás del header. Header absoluto sobre la portada, sin fondo opaco, borde ni desenfoque propio; la navegación móvil también es transparente.
+- [x] Cambiar «Experiencias», «Galería» y «Reservaciones» a naranja, a juego con los acentos naranjas existentes. Enlaces en var(--orange), #f28c28, con sombra de texto para legibilidad y foco visible conservado.
+- [x] Conservar el logo, las tres anclas de navegación, la accesibilidad y el menú móvil sin botón de hamburguesa; validar desktop, móvil, TypeScript y build. TypeScript y build:static correctos; capturas de escritorio 1440×900 y móvil 390×844 confirman el header superpuesto y las tres opciones naranjas sin desbordamiento.
+
+
+## Actualización: centrar la franja de categorías
+
+- [x] Centrar horizontalmente «MAR», «RUTA», «NATURALEZA» y «AVENTURA» con sus separadores dentro de la franja naranja. Fila de ancho completo con justify-content:center y separadores solo entre los cuatro términos.
+- [x] Mantener una sola presentación centrada, adaptable a escritorio y móvil, sin contenido recortado ni desplazamiento lateral. Eliminado el segundo grupo duplicado; tamaños y espacios móviles ajustados para que los cuatro términos quepan juntos.
+- [x] Conservar el resto de la página y validar TypeScript, build y vistas escritorio/móvil. TypeScript y build:static correctos; capturas 1440×900 y 390×844 confirman una sola fila centrada y completa; header transparente, naranja y demás secciones conservados.
+- [ ] Guardar las actualizaciones recientes de la franja y el carrusel como checkpoint de Manus. El transporte Git volvió a funcionar el 27-10-2026 y main aceptó el commit 9338ae5 con todos los cambios pendientes y las fotos nuevas. No apareció una tarjeta de checkpoint en la respuesta; queda pendiente confirmar ese recibo, no el guardado del código. La copia pública de GitHub también está actualizada.
+
+## Actualización: carrusel de portada solo con puntos
+
+- [x] Quitar el contenedor en cápsula, las flechas anterior/siguiente y el botón de pausa del carrusel de portada, dejando únicamente cinco puntos indicadores. Verificados cinco botones accesibles y ausencia de flechas, pausa y cápsula.
+- [x] Al seleccionar un punto, mostrar la foto correspondiente y continuar el avance automático cada 5.5 segundos, manteniendo marcado en naranja el indicador de la foto activa. Prueba en Preview y en GitHub Pages: seleccionar el quinto punto activa la foto 5 y el avance automático continúa a la siguiente foto después de 5.7 segundos.
+- [x] Conservar las cinco fotos, textos, navegación, franja centrada, diseños de escritorio/móvil, foco accesible y preferencia del sistema de movimiento reducido; guardar la versión pública en GitHub Pages. TypeScript y build:static correctos; capturas desktop/móvil revisadas; Pages actualizado en commit 854084c y comprobado en la URL pública. El checkpoint de Manus queda pendiente por el fallo del transporte Git registrado arriba.
+
+
+## Actualización: fotos nuevas del carrusel «El mar te llama»
+
+- [x] Reemplazar las cinco imágenes actuales de portada, en el orden recibido: personas en kayak, senderismo, recorrido todoterreno del desierto, cañón con visitantes y sandboarding. Verificados los cinco archivos y su orden en el HTML prerenderizado.
+- [x] Usar las imágenes originales proporcionadas, sin alterar los archivos; actualizar descripciones accesibles y leyendas para que correspondan a cada foto. Las cinco copias de Pages coinciden byte por byte con los originales y se subieron igualmente a Storage.
+- [x] Conservar los cinco puntos seleccionables, el avance automático cada 5.5 segundos, la preferencia de movimiento reducido, la franja centrada, el header transparente y la adaptación móvil. TypeScript y build correctos; no se alteraron lógica de controles, CSS ni otras secciones; capturas desktop/móvil comprobadas.
+- [x] Publicar también las cinco imágenes y la versión actualizada en el repositorio/copia de GitHub Pages conectado; validar Preview, compilación y los cinco recursos públicos. Publicación 40577443470 exitosa, commit 9abb1ce; página y cinco archivos devuelven HTTP 200, orden correcto y hashes de los cinco originales confirmados. Código guardado en main gestionado en 9338ae5; confirmación de tarjeta de checkpoint registrada arriba.
+
+
+## Actualización: imágenes del hero a cuadro completo
+
+- [x] Las cinco fotos, incluidas las verticales, deben ocupar el 100% del ancho y alto del carrusel como la referencia de kayak, sin verse a la mitad ni sobre una copia desenfocada. Usar encuadre cover y conservar texto legible a la izquierda. Verificadas las cinco imágenes cargadas con marco idéntico de 1265×820 en Preview, object-fit:cover y sin capa duplicada.
+- [x] En móvil, llenar igualmente la portada con la foto activa y conservar lectura de título, leyenda y puntos. Revisado el encuadre de portada en 1440×900 y 390×844; texto, navegación y cinco puntos permanecen visibles.
+- [x] Mantener sin alteraciones los cinco archivos originales; únicamente se ajusta su encuadre en pantalla para llenar la portada. Solo se modificó presentación CSS y metadatos de orientación; las imágenes se reutilizan sin transformación ni recarga.
+- [x] Conservar cinco puntos seleccionables, avance automático cada 5.5 segundos, descripciones, header y franja; comprobar Preview y GitHub Pages y guardar ambos. Puntos y selección verificados en Preview; TypeScript y compilación estática correctos en ambos repositorios. Push gestionado ff0c746 aceptado; copia GitHub ecf7993 publicada mediante workflow 40579306365, terminado con success.
+
+
+## Actualización: nueva serie de cinco fotos de portada
+
+- [x] Reemplazar nuevamente las cinco imágenes de «El mar te llama», en el orden recibido: mirador desde un arco rocoso, pareja en kayak, recorrido en cuatrimoto, sandboarding en dunas y grupo de senderismo en la cima. El HTML prerenderizado confirma exactamente ese orden.
+- [x] Cargar las cinco fotos originales proporcionadas, sin editarlas; actualizar textos alternativos, leyendas y categorías para describir lo que aparece en cada una. Las cinco imágenes se subieron al Storage y las copias de Pages verifican las mismas sumas SHA-256 de los originales.
+- [x] Conservar las cinco posiciones, los puntos seleccionables, avance automático de 5.5 segundos, encuadre a cuadro completo, movimiento reducido y lectura del texto. Se mantuvo intacta la lógica/CSS del carrusel, cinco puntos confirmados y TypeScript/build del sitio principal y la copia Pages pasan.
+- [ ] Sustituir los recursos también en la copia de GitHub Pages, validar ambas compilaciones, archivos e imagen pública, y guardar los cambios en ambos repositorios. El main gestionado aún debe guardarse; la nueva publicación de Pages sigue pendiente.

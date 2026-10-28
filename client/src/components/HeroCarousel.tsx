@@ -12,39 +12,39 @@ type HeroSlide = {
 
 const slides: HeroSlide[] = [
   {
-    src: siteAsset("images/site-assets/hero-kayak-arch.png"),
-    alt: "Dos visitantes en un kayak amarillo frente a la costa rocosa de San Carlos.",
+    src: siteAsset("images/site-assets/hero-canyon-arch-2026.png"),
+    alt: "Dos excursionistas descansan bajo un arco rocoso con vistas al mar.",
+    category: "Senderismo",
+    caption: "Contempla el mar desde la roca",
+    orientation: "landscape",
+  },
+  {
+    src: siteAsset("images/site-assets/hero-kayak-pair-2026.png"),
+    alt: "Dos visitantes reman en un kayak amarillo frente a una formación rocosa.",
     category: "Kayak",
     caption: "Rema entre mar y montaña",
     orientation: "landscape",
   },
   {
-    src: siteAsset("images/site-assets/hero-senderismo.png"),
-    alt: "Dos visitantes recorren un sendero rocoso con vistas a la costa de San Carlos.",
-    category: "Senderismo",
-    caption: "Sube por los senderos de la sierra",
-    orientation: "portrait",
-  },
-  {
-    src: siteAsset("images/site-assets/hero-tour-desierto.png"),
-    alt: "Persona en una cuatrimoto junto a la costa de San Carlos.",
+    src: siteAsset("images/site-assets/hero-atv-desert-2026.png"),
+    alt: "Grupo de visitantes realiza una ruta en cuatrimoto por el desierto acompañado por un guía.",
     category: "Tour guiado",
-    caption: "Explora el desierto junto al mar",
-    orientation: "portrait",
+    caption: "Explora el desierto sobre ruedas",
+    orientation: "landscape",
   },
   {
-    src: siteAsset("images/site-assets/hero-canon-nacapule.png"),
-    alt: "Dos personas descansan entre palmeras y paredes de roca en un cañón.",
-    category: "Senderismo",
-    caption: "Descubre el cañón de Nacapule",
-    orientation: "portrait",
-  },
-  {
-    src: siteAsset("images/site-assets/hero-sandboard.png"),
-    alt: "Visitante prepara una tabla de sandboarding en las dunas de arena.",
+    src: siteAsset("images/site-assets/hero-sandboarding-2026.png"),
+    alt: "Visitante se prepara para deslizarse en una tabla por las dunas de arena.",
     category: "Aventura",
-    caption: "Deslízate entre arena y mar",
+    caption: "Descubre la aventura en las dunas",
     orientation: "portrait-tall",
+  },
+  {
+    src: siteAsset("images/site-assets/hero-hiking-group-2026.png"),
+    alt: "Grupo de excursionistas posa en la cima de una montaña rocosa con vistas al mar.",
+    category: "Senderismo",
+    caption: "Comparte la ruta hasta la cima",
+    orientation: "landscape",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function HeroCarousel() {
       className="hero-carousel"
       role="region"
       aria-roledescription="carrusel"
-      aria-label="Cinco fotos de kayak, senderismo y aventura en el desierto"
+      aria-label="Cinco fotos de kayak, senderismo, recorrido en cuatrimoto y aventuras en las dunas"
     >
       <div className="hero-carousel-slides" aria-live="off">
         {slides.map((slide, index) => (
