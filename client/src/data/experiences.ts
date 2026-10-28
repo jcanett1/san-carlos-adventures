@@ -21,7 +21,7 @@ export type Experience = {
   tagline: string;
   description: string;
   highlights: string[];
-  icon: 'kayak' | 'bus' | 'yacht' | 'fish' | 'hike';
+  icon: 'kayak' | 'bus' | 'yacht' | 'fish' | 'hike' | 'atv' | 'sandboard' | 'snorkel';
   image: string;
   imageAlt: string;
   imagePosition?: string;
@@ -145,6 +145,60 @@ export const experiences: Experience[] = [
       { name: 'Cañón de Nacapule', price: 'Consulta precio', note: '2.5–3 horas · dificultad baja–media.' },
       { name: 'Cerro Tetakawi', price: 'Consulta precio', note: '4–5 horas · dificultad alta · casco obligatorio.' },
     ],
+  },
+  {
+    id: 'atv',
+    number: '06',
+    title: 'Paseo en cuatrimoto',
+    shortTitle: 'Cuatrimoto',
+    category: 'Tierra',
+    tagline: 'Explora el desierto sobre ruedas.',
+    description: 'Disfruta un paseo en cuatrimoto por paisajes del desierto. Consulta al equipo la ruta y los detalles de la experiencia antes de reservar.',
+    highlights: ['Paseo todoterreno', 'Paisajes del desierto', 'Aventura para compartir'],
+    icon: 'atv',
+    image: siteAsset("images/site-assets/route-atv-group.png"),
+    imageAlt: 'Un guía conversa con visitantes junto a una cuatrimoto en un paisaje desértico.',
+    photoGallery: [
+      { src: siteAsset("images/site-assets/route-atv-group.png"), alt: 'Un guía conversa con visitantes junto a una cuatrimoto en un paisaje desértico.' },
+      { src: siteAsset("images/site-assets/route-atv-riders.png"), alt: 'Dos visitantes recorren un camino del desierto en una cuatrimoto.' },
+    ],
+    priceOptions: [{ name: 'Paseo en cuatrimoto', price: 'Consulta precio' }],
+  },
+  {
+    id: 'sandboard',
+    number: '07',
+    title: 'Sandboard en las dunas',
+    shortTitle: 'Sandboard',
+    category: 'Tierra',
+    tagline: 'Deslízate sobre las dunas de arena.',
+    description: 'Vive una experiencia de sandboard en las dunas de arena de San Carlos. Consulta al equipo los detalles de la actividad y la disponibilidad.',
+    highlights: ['Dunas de arena', 'Aventura al aire libre', 'Paisajes del desierto'],
+    icon: 'sandboard',
+    image: siteAsset("images/site-assets/route-sandboard-solo.png"),
+    imageAlt: 'Visitante sostiene una tabla de sandboard frente a las dunas.',
+    photoGallery: [
+      { src: siteAsset("images/site-assets/route-sandboard-solo.png"), alt: 'Visitante sostiene una tabla de sandboard frente a las dunas.' },
+      { src: siteAsset("images/site-assets/route-sandboard-pair.png"), alt: 'Dos visitantes muestran sus tablas en un paisaje de arena y montañas.' },
+    ],
+    priceOptions: [{ name: 'Sandboard en las dunas', price: 'Consulta precio' }],
+  },
+  {
+    id: 'snorkel',
+    number: '08',
+    title: 'Snorkel',
+    shortTitle: 'Snorkel',
+    category: 'Mar',
+    tagline: 'Descubre el mundo bajo la superficie.',
+    description: 'Explora bajo la superficie con una experiencia de snorkel. Consulta al equipo las condiciones del mar, el equipo y los detalles de la salida.',
+    highlights: ['Exploración bajo el agua', 'Conoce el entorno marino', 'Consulta condiciones del mar'],
+    icon: 'snorkel',
+    image: siteAsset("images/site-assets/route-snorkel-coral.png"),
+    imageAlt: 'Formación de coral fotografiada bajo el agua.',
+    photoGallery: [
+      { src: siteAsset("images/site-assets/route-snorkel-coral.png"), alt: 'Formación de coral fotografiada bajo el agua.' },
+      { src: siteAsset("images/site-assets/route-snorkelers.png"), alt: 'Dos visitantes con equipo de snorkel exploran el agua juntos.' },
+    ],
+    priceOptions: [{ name: 'Snorkel', price: 'Consulta precio' }],
   },
 ];
 

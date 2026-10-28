@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import {
   ArrowUpRight,
   BusFront,
+  CarFront,
   Check,
   Fish,
+  LifeBuoy,
   Mountain,
   RotateCcw,
   RotateCw,
   Ship,
+  Sun,
   Waves,
   type LucideIcon,
 } from "lucide-react";
@@ -20,6 +23,9 @@ const icons: Record<Experience["icon"], LucideIcon> = {
   yacht: Ship,
   fish: Fish,
   hike: Mountain,
+  atv: CarFront,
+  sandboard: Sun,
+  snorkel: LifeBuoy,
 };
 
 export default function ExperienceCard({ experience }: { experience: Experience }) {

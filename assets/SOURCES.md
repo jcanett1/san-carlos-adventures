@@ -63,3 +63,14 @@ Esta serie sustituye la serie anterior del carrusel «El mar te llama». Las cin
 5. `pasted_file_FYWuzO_image.png` — grupo de senderismo posa en una cima rocosa. Storage: `/manus-storage/pasted_file_FYWuzO_image_2ec4f7f9.png`; Pages: `images/site-assets/hero-hiking-group-2026.png`.
 
 El carrusel conserva puntos seleccionables, reproducción automática cada 5.5 segundos, preferencia de movimiento reducido y fotos a cuadro completo. Las descripciones accesibles y leyendas ahora corresponden a esta serie.
+
+
+## Fotos de las rutas nuevas: cuatrimoto, sandboard y snorkel (27 de octubre de 2026)
+
+El usuario proporcionó las imágenes para las tres nuevas tarjetas de «Cinco rutas». Se cargaron seis archivos únicos, sin edición; dos pares de adjuntos repetían exactamente los mismos bytes (`pasted_file_lKJUSA_image.png` / `pasted_file_ELobGj_image.png` y `pasted_file_fsEVZ0_image.png` / `pasted_file_xVVVro_image.png`), por lo que cada foto duplicada se usa una sola vez.
+
+- **Cuatrimoto:** `pasted_file_6F0htG_image.png` (`/manus-storage/pasted_file_6F0htG_image_c2896039.png`; Pages: `images/site-assets/route-atv-group.png`) y `pasted_file_lKJUSA_image.png` (`/manus-storage/pasted_file_lKJUSA_image_50a47641.png`; Pages: `images/site-assets/route-atv-riders.png`).
+- **Sandboard en las dunas:** `pasted_file_RX4nhF_image.png` (`/manus-storage/pasted_file_RX4nhF_image_81b7e097.png`; Pages: `images/site-assets/route-sandboard-solo.png`) y `pasted_file_J2VFHW_image.png` (`/manus-storage/pasted_file_J2VFHW_image_abffb7d4.png`; Pages: `images/site-assets/route-sandboard-pair.png`).
+- **Snorkel:** `pasted_file_LURZIO_image.png` (`/manus-storage/pasted_file_LURZIO_image_1c545ddd.png`; Pages: `images/site-assets/route-snorkel-coral.png`) y `pasted_file_fsEVZ0_image.png` (`/manus-storage/pasted_file_fsEVZ0_image_d64921b0.png`; Pages: `images/site-assets/route-snorkelers.png`).
+
+Las tarjetas muestran «Consulta precio» porque no se proporcionó una tarifa, y las descripciones se limitan a los detalles confirmados o visibles en las fotos.

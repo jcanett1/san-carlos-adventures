@@ -26,6 +26,9 @@ const galleryPhotoIndexes: Record<string, number[]> = {
   yacht: [0, 1, 2],
   fishing: [0],
   hiking: [0, 4],
+  atv: [0, 1],
+  sandboard: [0, 1],
+  snorkel: [0, 1],
 };
 const galleryPhotos = experiences.flatMap((experience) => {
   return galleryPhotoIndexes[experience.id].map((photoIndex, index) => {
@@ -156,7 +159,7 @@ export default function Home() {
                   Elige tu siguiente aventura
                 </p>
                 <h2 id="experiences-title">
-                  Cinco rutas.
+                  Ocho rutas.
                   <span>Un mismo espíritu aventurero.</span>
                 </h2>
               </div>
@@ -191,8 +194,8 @@ export default function Home() {
                 <span>La emoción se queda.</span>
               </h2>
               <p>
-                Fotos de kayak, recorrido guiado, paseos en yate, pesca deportiva
-                y senderismo para mostrarte más de cada aventura en San Carlos.
+                Fotos de kayak, recorrido guiado, paseos en yate, pesca deportiva,
+                senderismo, cuatrimoto, sandboard y snorkel en San Carlos.
               </p>
               <p className="gallery-language-note">
                 <Languages size={19} aria-hidden="true" />
