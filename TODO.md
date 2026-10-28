@@ -149,3 +149,12 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 ## Actualización: tres tours de senderismo (28 de octubre de 2026)
 
 - [x] En la tarjeta Senderismo mostrar los tours a Nacapule, La Poza Manantial y Cerro Tetakawi, en ese orden, tanto en el texto descriptivo como en las opciones del reverso. Mantener «Consulta precio», conservar detalles ya confirmados de Nacapule y Tetakawi y no inventar duración o dificultad de La Poza Manantial. Conservar fotos, giro, ocho tarjetas y todo el contenido no relacionado. Validar y sincronizar el repositorio principal y la copia publicada en GitHub Pages. TypeScript y compilaciones de ambas copias correctos; solo se modificó el catálogo de senderismo. Pages 02a2975 publicado mediante workflow 40709255848; HTTP 200 confirma tres opciones en orden, texto frontal actualizado, cinco fotos de senderismo y ocho tarjetas conservadas. Bundle index-B0-FAdQQ.js disponible públicamente.
+
+
+## Actualización: recorrido guiado, reserva, fotografías y yate (28 de octubre de 2026)
+
+- [x] Quitar la visita a las ruinas del Catch 22 del recorrido guiado, conservando los otros destinos, duración y capacidad ya publicados. La descripción compilada conserva Ojo de Agua, La Manga 2, playa Los Algodones, 2.5–3 horas y máximo 14 personas, sin nombrar Catch 22.
+- [x] Cambiar el tiempo de anticipación de la reserva a 24 a 48 horas tanto en los pasos como en la política de reservación, para evitar indicaciones contradictorias. Se validaron las dos menciones tras TypeScript y prerender.
+- [x] En «Fotografías de los tours», indicar que tardan de 5 a 7 días en compartirse. La política compilada contiene esta frase y ya no señala la página de Facebook.
+- [x] Agregar el yate «Mi Gusto» a la tarjeta de yate con costo de $3,500 MXN por hora y capacidad de 10 a 25 personas como máximo, preservando la opción «Si no quieres no» a $2,500 MXN/hora para 1 a 8 personas. HTML compilado confirma las dos opciones y ambas capacidades.
+- [ ] Validar, guardar en main y publicar la copia GitHub Pages. TypeScript/build de las dos copias correctos; falta confirmar push y workflow Pages.

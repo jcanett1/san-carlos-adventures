@@ -4,7 +4,7 @@ const policies = [
   {
     title: "Políticas de reservación",
     points: [
-      "El tour debe apartarse con un mínimo de 48 horas de anticipación.",
+      "El tour debe apartarse con 24 a 48 horas de anticipación.",
       "La reservación se confirma con un depósito del 50% del monto total de la actividad.",
       "Para dar de alta el seguro, es responsabilidad del cliente proporcionar datos como nombre completo y fecha de nacimiento.",
     ],
@@ -29,7 +29,7 @@ const policies = [
   {
     title: "Fotografías de los tours",
     points: [
-      "Las fotografías tardan de 5 a 7 días en subirse a la página de Facebook.",
+      "Las fotografías de los tours tardan de 5 a 7 días en compartirse.",
       "Si no quieres que tus fotos sean públicas, trae una memoria USB para compartirlas.",
       "Si te unes a un tour en grupo y no quieres que tus fotos se publiquen, avisa al guía al inicio para que puedan tomarte fotos aparte.",
       "Los guías están certificados en turismo de aventura, no son fotógrafos; por lo tanto, las fotografías no son profesionales.",

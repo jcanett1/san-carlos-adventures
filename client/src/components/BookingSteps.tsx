@@ -8,7 +8,7 @@ const bookingGroups = [
       {
         title: "Anticipación y depósito",
         description:
-          "Reserva cualquier tour con un mínimo de 48 horas de anticipación y un depósito del 50% del total, mediante transferencia o pago en oficina.",
+          "Reserva cualquier tour con 24 a 48 horas de anticipación y un depósito del 50% del total, mediante transferencia o pago en oficina.",
       },
       {
         title: "Consulta la disponibilidad de guía",

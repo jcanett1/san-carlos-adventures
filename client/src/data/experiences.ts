@@ -62,7 +62,7 @@ export const experiences: Experience[] = [
     shortTitle: 'Recorrido guiado',
     category: 'Tierra',
     tagline: 'Una ruta para descubrir y escuchar historias.',
-    description: 'Explora el desierto sin necesidad de caminar en un vehículo abierto. Visita las ruinas del Catch 22, Ojo de Agua, La Manga 2 y playa Los Algodones. Duración aproximada: 2.5–3 horas; capacidad máxima de 14 personas.',
+    description: 'Explora el desierto sin necesidad de caminar en un vehículo abierto. Visita Ojo de Agua, La Manga 2 y playa Los Algodones. Duración aproximada: 2.5–3 horas; capacidad máxima de 14 personas.',
     highlights: ['Recorrido acompañado', 'Descubre el destino', 'Disfruta en grupo'],
     icon: 'bus',
     image: siteAsset("images/site-assets/desierto-tour_4eacfbc7.jpg"),
@@ -97,6 +97,7 @@ export const experiences: Experience[] = [
     ],
     priceOptions: [
       { name: 'Yate «Si no quieres no»', price: '$2,500 MXN / hora', note: 'Capacidad de 1 a 8 personas.' },
+      { name: 'Yate «Mi Gusto»', price: '$3,500 MXN / hora', note: 'Capacidad de 10 a 25 personas como máximo.' },
     ],
   },
   {
