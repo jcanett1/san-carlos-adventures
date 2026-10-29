@@ -1,4 +1,4 @@
-import { ArrowUpRight, Facebook, Instagram, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { contact } from "@/data/contact";
 import "./ContactPanel.css";
 
@@ -52,6 +52,21 @@ export default function ContactPanel() {
         ))}
       </div>
       <div className="contact-direct">
+        <a
+          className="contact-method"
+          href={contact.officeMapsHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Ver ubicación de la oficina en Google Maps: ${contact.officeAddress}`}
+        >
+          <span className="contact-method-icon"><MapPin size={20} aria-hidden="true" /></span>
+          <span className="contact-method-copy">
+            <span className="contact-label">Ubicación de la oficina</span>
+            <strong>{contact.officeAddress}</strong>
+            <span className="contact-label">Ver en Google Maps</span>
+          </span>
+          <ArrowUpRight className="contact-external-icon" size={15} aria-hidden="true" />
+        </a>
         <a className="contact-method" href={contact.phoneHref} aria-label={`Llamar al ${contact.phone}`}>
           <span className="contact-method-icon"><Phone size={20} aria-hidden="true" /></span>
           <span className="contact-method-copy">

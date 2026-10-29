@@ -1,6 +1,8 @@
 import { FACEBOOK_URL } from "./experiences";
 
 export const contact = {
+  officeAddress: "Blvd. Tetakwi #6, Plaza La Mar, sector Creston, C.P. 85506",
+  officeMapsHref: "https://maps.app.goo.gl/yeejow9xAsgPfvNv7",
   phone: "622 130 7338",
   phoneHref: "tel:+526221307338",
   additionalPhone: "622 142 5010",
