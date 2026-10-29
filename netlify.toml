@@ -1,0 +1,6 @@
+[build]
+  command = "pnpm run build:static"
+  publish = "dist/public"
+
+[build.environment]
+  GITHUB_PAGES = "false"
