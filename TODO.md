@@ -185,4 +185,4 @@ El avance está preparado para guardarse como checkpoint de Manus. No se solicit
 
 
 ## Actualización: ubicación de la oficina
-- [ ] En «Información de contacto», mostrar la dirección «Blvd. Tetakwi #6, Plaza La Mar, sector Creston, C.P. 85506» y añadir un enlace a Google Maps: https://maps.app.goo.gl/yeejow9xAsgPfvNv7. Mantener los contactos y redes existentes, replicar el contenido en GitHub/Netlify y confirmar su publicación.
+- [x] En «Información de contacto», mostrar la dirección «Blvd. Tetakwi #6, Plaza La Mar, sector Creston, C.P. 85506» y añadir un enlace a Google Maps: https://maps.app.goo.gl/yeejow9xAsgPfvNv7. Mantener los contactos y redes existentes, replicar el contenido en GitHub/Netlify y confirmar su publicación. TypeScript y builds principal, Netlify y Pages correctos; ubicación con icono y «Ver en Google Maps», nueva pestaña con `noopener noreferrer`. Publicado en GitHub mediante ea4c155; verificación HTTPS de sancarlosadventures.mx y GitHub Pages confirma dirección y enlace exactos, 2 teléfonos, correo, 4 redes y 8 tarjetas conservadas.
