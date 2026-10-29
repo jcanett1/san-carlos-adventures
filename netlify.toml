@@ -4,3 +4,8 @@
 
 [build.environment]
   GITHUB_PAGES = "false"
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/images/site-assets/brand-logo.jpg"
+  status = 200
